@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/pro/vendor/topthink/think-worker" />
+      <path value="$PROJECT_DIR$/pro/vendor/workerman/workerman" />
+      <path value="$PROJECT_DIR$/pro/vendor/composer" />
+      <path value="$PROJECT_DIR$/pro/vendor/topthink/think-captcha" />
+      <path value="$PROJECT_DIR$/pro/vendor/topthink/think-helper" />
+      <path value="$PROJECT_DIR$/pro/vendor/topthink/think-image" />
+      <path value="$PROJECT_DIR$/pro/vendor/topthink/think-installer" />
+      <path value="$PROJECT_DIR$/pro/vendor/topthink/think-migration" />
+      <path value="$PROJECT_DIR$/pro/vendor/topthink/think-mongo" />
+      <path value="$PROJECT_DIR$/pro/vendor/topthink/think-oracle" />
+      <path value="$PROJECT_DIR$/pro/vendor/topthink/think-queue" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
+</project>
