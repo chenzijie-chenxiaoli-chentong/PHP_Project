@@ -1,0 +1,226 @@
+
+ <!DOCTYPE html>
+<html>
+
+{include file="base/head" /}
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>通道列表</h5> &nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-xs btn-success" onclick="payway_create();"> <i class="fa fa-plus"></i> 新增通道帐户</button>
+                        <a class="btn btn-xs btn-info" href="{:url('payway/edits')}"> <i class="fa fa-plus"></i> 批量修改</a>
+                    </div>
+                    <div class="ibox-content">
+                        <form class="row">
+
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input type="text" name="name" placeholder="名称/ID" value="{:input('name')}" class="input-sm form-control"> 
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                    <select class="form-control" name="belong">
+                                        
+                                    <option value="">所有所属人</option>
+
+                                    {foreach $payway_belong_list as $payway_belong}
+
+                                    <option value="{$payway_belong}">{$payway_belong}</option>
+
+                                    {/foreach}
+
+                                    </select>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <select name="payway" class="form-control">
+                                        {if input('payway')}
+                                        <option value="{:input('payway')}">
+                                            
+                                            {$payway_list[input('payway')]['name']}
+
+                                        </option>
+                                        {/if}
+                                        <option value=""></option>
+                                        {foreach $payway_list as $payway_code => $payway_content}
+                                        <option value="{$payway_code}">{$payway_content.name}</option>
+                                        {/foreach}
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <select name="is_active" class="form-control">
+                                        {if input('is_active') === '0'}<option value="0">冻结</option>{/if}
+                                        {if input('is_active') === '1'}<option value="0">启用</option>{/if}
+                                        <option value="">启用状态选择</option>
+                                        <option value="1">启用</option>
+                                        <option value="0">未启用</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <select name="could_use" class="form-control">
+                                        {if input('could_use') === '0'}<option value="0">冻结</option>{/if}
+                                        {if input('could_use') === '1'}<option value="1">启用</option>{/if}
+                                        <option value="">冻结状态选择</option>
+                                        <option value="0">冻结</option>
+                                        <option value="1">可用</option>
+
+                                    </select>
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-sm btn-primary" style="margin-bottom:0px;height:34px;"> 搜索</button> 
+                                    </span>
+                                </div>
+                            </div>
+
+  
+
+                        </form>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>名称</th>
+                                        <th>所属人-使用人</th>
+                                        <th>类型</th>
+                                        <th>启用状态</th>
+                                        <th>微信-支付宝</th>
+                                        <th>金额上限</th>
+                                        <th>次数上限</th>
+                                        <th>失败上限</th>
+                                        <th>标识</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {foreach $list as $data}
+                                    <tr>
+
+                                        <td>{$data.id}</td>
+                                        <td>{$data.name}</td>
+                                        <td>{$data.belong}-{$data.user ?: '全部商户'}</td>
+                                        <td>{$payway_list[$data.payway]['name']}</td>
+                                        <td onclick="let_could_use({$data.id},'{$data.name}');">{$data.is_active ? '启用' : '冻结'}-{$data.could_use ? '可用' : '冻结'}</td>
+                                        <td>{$data.is_wechat ? '启用' : '未启用'}-{$data.is_ali ? '启用' : '未启用'}</td>
+                                        <td>{$data.success_money/100} / {$data.success_max_money/100}</td>
+                                        <td>{$data.success_times} / {$data.success_max_num}</td>
+                                        <td>{$data.faild_times}/{$data.max_failed_times}</td>
+                                        <td>{$data.identify_id}</td>
+                                        <td>
+                                            
+                                            <a class="btn btn-xs btn-warning" href="{:url('payway/create',['id' => $data.id])}">编辑</a>
+                                            <button class="btn btn-xs btn-danger" onclick="delet({$data.id},'{$data.name}');">删除</button>
+
+                                        </td>
+
+                                    </tr>
+                                    {/foreach}
+                                </tbody>
+                            </table>
+                            {$list->render()}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="payway_create" style="padding:20px;display:none;">
+        
+        <form class="form-horizontal" method="get" action="{:url('payway/create')}">
+
+            <div class="form-group">
+
+                <div class="col-sm-12">
+                    
+                    <select class="form-control" name="payway">
+
+                        <option value="">请选择通道类型</option>
+                        
+                        {foreach $payway_list as $payway_code => $payway}
+
+                        <option value="{$payway_code}">{$payway.name}</option>
+
+                        {/foreach}
+
+                    </select>
+
+                </div>
+
+                <br/>
+                <br/>
+
+                <div class="col-sm-12">
+
+                    <button class="btn btn-block btn-info" type="submit">确认添加</button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+{include file="base/js" /}
+
+<script type="text/javascript">
+
+/*
+ * 创建
+ */
+
+function payway_create(){
+
+    layer.open({
+
+        type:1,
+        content:$('#payway_create')
+
+    })
+
+}
+
+/*
+ * 删除
+ */
+
+function delet(id,name){
+
+    layer.confirm('确认删除支付通道['+ name +']？',function(){
+
+        location.href = "{:url('payway/delete')}?id=" + id + "&name=" + name;
+
+    })
+
+}
+
+function let_could_use(id,name){
+
+    layer.confirm('确认将通道【'+ name +'】连续失败次数清空并解除冻结？',function(){
+
+        location.href = "{:url('payway/let_could_use')}?id=" + id;
+
+    });
+
+}
+
+</script>
+
+</body>
+
+</html>

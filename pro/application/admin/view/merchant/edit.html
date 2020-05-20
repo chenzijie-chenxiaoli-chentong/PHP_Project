@@ -1,0 +1,97 @@
+{include file="base/head" /}
+<div class="wrapper wrapper-content animated fadeInRight">
+
+     &nbsp;&nbsp;&nbsp; <h1>修改【{$info['username']}】</h1>
+
+    <br>
+    <br>
+    <br>
+
+
+    <div id="create">
+        
+        <form class="form-horizontal" id="merchant" method="post" action="{:url('merchant/edit_deal')}">
+
+            <input type="hidden" name="id" value="{$info['id']}">
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">名称：</label>
+
+                <div class="col-sm-8">
+                    <input type="text" placeholder="名称" class="form-control" name="name" value="{$info.name}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">备注：</label>
+
+                <div class="col-sm-8">
+                    <input type="text" placeholder="备注" class="form-control" name="mark" value="{$info.mark}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">支付宝原生费率：</label>
+
+                <div class="col-sm-8">
+                    <input type="text" placeholder="支付宝原生费率" class="form-control" name="fixed_money_ali_percent_fee" value="{$id ? $info.fixed_money_ali_percent_fee : ''}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">微信原生费率：</label>
+
+                <div class="col-sm-8">
+                    <input type="text" placeholder="微信原生费率" class="form-control" name="fixed_money_wechat_percent_fee" value="{$id ? $info.fixed_money_wechat_percent_fee : ''}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">支付宝固码费率：</label>
+
+                <div class="col-sm-8">
+                    <input type="text" placeholder="支付宝固码费率" class="form-control" name="unfixed_money_ali_percent_fee" value="{$id ? $info.unfixed_money_ali_percent_fee : ''}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">微信固码费率：</label>
+
+                <div class="col-sm-8">
+                    <input type="text" placeholder="微信固码费率" class="form-control" name="unfixed_money_wechat_percent_fee" value="{$id ? $info.unfixed_money_wechat_percent_fee : ''}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">是否启用：</label>
+
+                <div class="col-sm-6">
+                   <div class="checkbox i-checks">
+                        <label><input type="radio" value="1" name="status" {if $info.status == 1}checked{/if}> <i></i> 启用</label>
+                        <label><input type="radio" value="-1" name="status" {if $info.status == -1}checked{/if}> <i></i> 不启用</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-8">
+                    <button class="btn btn-sm btn-white" type="submit">确  认</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+{include file="base/js" /}
+
+<script type="text/javascript">
+    
+    $(document).ready(function () {
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    });
+
+</script>

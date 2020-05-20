@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>支付</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    {include file="admin@base/head"}
+</head>
+<body>
+
+    <div>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4 row" style="text-align:center;">
+                
+                <div class="col-md-12">
+                    <img src="__STATIC__/img/{$img_name}">
+                </div>
+
+                <div class="col-md-12">
+                    <img src="{$qr_code_url}" style="width:70%;">
+                </div>
+
+                <div class="col-md-12">
+                    {if is_mobile()}
+                    <h3 style="color:red;">请支付￥{$money}元，否则支付无效</h3>
+                    {else /}
+                    <h1 style="color:red;">请支付￥{$money}元，否则支付无效</h1>
+                    {/if}
+                </div>
+
+                {if is_mobile()}
+
+                <div class="col-md-12"><p style="float: left;margin-left: 15%;">①截图或保存图片到手机</p></div>
+                <div class="col-md-12"><p style="float: left;margin-left: 15%;">②{$tit_msg}</p></div>
+                <div class="col-md-12"><p style="float: left;margin-left: 15%;">③点击右上角，从相册选取刚才的截图进行支付</p></div>
+
+                {else /}
+
+                <div class="col-md-12"><p style="">{$tit_msg}</p></div>
+
+                {/if}
+
+                <div class="col-md-12"> 
+                    <h5>订单号：{$order_id}</h5>
+                    <br/>
+                    <h4 id="pay_status">订单过期倒计时：<label id="expire_seconds"></label>秒</h4>
+                </div>
+
+            </div>
+            <div class="col-sm-4"></div>
+
+        </div>
+
+    </div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    
+    expire_seconds = {$expire_seconds};
+
+    expire_seconds_interval = setInterval(function(){
+
+        if(expire_seconds == 0){
+
+            alert('该订单已过期');
+
+            $('#pay_status').html('<p style="color:red;">该订单已过期</p>');
+
+            clearInterval(expire_seconds_interval);
+
+        }
+
+        $.get("{:url('test/check_success')}",{order_id:'{$order_id}'},function(data){
+
+            if( data.code ){
+
+                alert('支付成功！');
+
+                $('#pay_status').html('<p style="color:red;">该订单已过期</p>');
+
+                clearInterval(expire_seconds_interval);
+                
+            }
+
+        });
+
+        $('#expire_seconds').text( --expire_seconds );
+
+    },1000);
+
+</script>
+</html>

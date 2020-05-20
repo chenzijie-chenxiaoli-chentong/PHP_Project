@@ -1,0 +1,80 @@
+
+ <!DOCTYPE html>
+<html>
+
+{include file="base/head" /}
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5> {:input('id') ? '修改' : '新增'} [{$moneyaccount_conf['name']}]</h5> &nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-xs btn-success" href="{:url('moneyaccount/index')}"> <i class="fa fa-plus"></i> 返回帐户列表</a>
+                    </div>
+                    <div class="ibox-content">
+                        <form class="form-horizontal" method="post" action="{:url('moneyaccount/create_deal')}">
+
+                            <input type="hidden" name="id" value="{:input('id')}">
+                            <input type="hidden" name="account_type" value="{$account_type}">
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">帐户名称</label>
+
+                                <div class="col-sm-8">
+                                    <input type="text" name="name" placeholder="帐户名称" class="form-control" value="{$account_info ? $account_info['name'] :''}">
+                                </div>
+                            </div>
+
+                            {foreach $moneyaccount_conf.fields as $field => $name}
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">{$name}</label>
+
+                                <div class="col-sm-8">
+                                    <input type="text" name="{$field}" placeholder="{$name}" class="form-control" value="{$account_info ? $account_info['account_info'][$field] :''}" >
+                                </div>
+                            </div>
+
+                            {/foreach}
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">备注信息</label>
+
+                                <div class="col-sm-8">
+                                    <input type="text" name="mark" placeholder="备注信息" class="form-control" value="{$account_info ? $account_info['mark'] :''}">
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-8">
+                                    <button class="btn btn-sm btn-white" type="submit">确  认</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+{include file="base/js" /}
+
+
+</body>
+
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+
+</html>

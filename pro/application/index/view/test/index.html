@@ -1,0 +1,22 @@
+{include file="admin@base/head"}
+
+<div style="text-align: center;font-size: 24px;">
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+		<form action="test/newpay" method="POST">
+			<p>请选择支付方式</p>
+			<input type="radio" name="method" value="wechat">微信
+			<input type="radio" name="method" value="ali">支付宝<br/><br/><br/>
+			<p>请选择支付类型</p>
+			<input type="radio" name="is_fixed_money" value="1">原生
+			<input type="radio" name="is_fixed_money" value="0">固码<br/><br/><br/>
+			<p>请输入支付金额</p>
+			<input type="text" name="money">
+			<br/><br/><br/>
+			<button class="btn btn-info">确认支付</button>
+		</form>
+
+</div>

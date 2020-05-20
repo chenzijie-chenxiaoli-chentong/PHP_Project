@@ -1,0 +1,104 @@
+
+ <!DOCTYPE html>
+<html>
+
+{include file="base/head" /}
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>资金日志</h5> &nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="ibox-content">
+                        <form class="row">
+
+                            <div class="col-sm-1">
+                                <div class="input-group">
+                                    <input type="text" name="username" placeholder="用户名" value="{:input('username')}" class="input-sm form-control"> 
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input type="text" name="starttime" placeholder="开始时间" value="{:input('starttime')}" class="input-sm form-control"> 
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input type="text" name="endtime" placeholder="结束时间" value="{:input('endtime')}" class="input-sm form-control"> 
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input type="text" name="order_id" placeholder="订单号" value="{:input('order_id')}" class="input-sm form-control"> 
+                                </div>
+                            </div>
+
+                            <div class="col-sm-1">
+
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-sm btn-primary"> 搜索</button> 
+                                    </span>
+                            </div>
+
+                        </form>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>用户身份</th>
+                                        <th>用户名</th>
+                                        <th>时间</th>
+                                        <th>金额</th>
+                                        <th>原因</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {foreach $list as $data}
+                                    <tr>
+
+                                        <td>{$data.user_type}</td>
+                                        <td>{$data.username}</td>
+                                        <td>{$data.time}</td>
+                                        <td>{$data.money/100}</td>
+                                        <td>{$data.mark}</td>
+
+                                    </tr>
+                                    {/foreach}
+                                </tbody>
+                            </table>
+                        </div>
+                        {$list->render()}
+                    </div>
+                    总收入【{$sum_money/100}】元
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+{include file="base/js" /}
+
+<script type="text/javascript" src="__STATIC__/laydate/laydate.js"></script>
+
+<script type="text/javascript">
+
+    laydate.render({
+      elem: '[name=starttime]', //指定元素
+      type:'datetime'
+    });    laydate.render({
+      elem: '[name=endtime]', //指定元素
+      type:'datetime'
+    });
+
+</script>
+
+</body>
+
+</html>

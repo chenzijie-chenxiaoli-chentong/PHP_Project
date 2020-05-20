@@ -1,0 +1,58 @@
+
+ <!DOCTYPE html>
+<html>
+
+{include file="base/head" /}
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>提现列表</h5> &nbsp;&nbsp;&nbsp;
+                        {if session('admin.pos') == 1 or session('merchant')}
+                        <button class="btn btn-xs btn-success" onclick="create();"> <i class="fa fa-plus"></i> 申请提现</button>
+                        {/if}
+                    </div>
+                    <div class="ibox-content">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>账号</th>
+                                        <th>时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {foreach $list as $data}
+                                    <tr>
+
+                                        <td>{$data.id}</td>
+                                        <td>{$data.username}</td>
+                                        <td>{$data.create_time}</td>
+                                        <td>{$data.content}</td>
+
+                                    </tr>
+                                    {/foreach}
+                                </tbody>
+                            </table>
+                        </div>
+                        {$list->render()}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+{include file="base/js" /}
+
+
+
+</body>
+
+</html>

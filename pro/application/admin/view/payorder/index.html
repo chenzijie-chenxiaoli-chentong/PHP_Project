@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+{include file="base/head" /}
+<link href="__STATIC__/hplus/css/plugins/switchery/switchery.css" rel="stylesheet">
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+
+                        <div class="row">
+                            
+                            <h5 class="col-md-1" style="margin-left: 20px;">订单列表</h5>
+
+                            <div class="col-md-1"><b>自动刷新间隔</b></div>
+                            <div class="col-md-1"><input class="form-control" value="{if input('autorefresh')}{:input('autorefresh')}{/if}" placeholder="单位：秒" type="text" id="refresh_interval"></div>
+                            <div class="col-md-1"><b>是否自动刷新</b></div>
+                            <div class="col-md-1"><input type="checkbox" class="js-switch" {if input('autorefresh')}checked{/if} /></div>
+
+                            
+                        </div>
+
+                    </div>
+                    <div class="ibox-content">
+                        <form class="row">
+                            {if session('admin')}
+                            <div class="col-sm-1">
+                                <div class="input-group">
+                                    <input type="text" name="username" placeholder="创建商户" value="{:input('username')}" class="input-sm form-control"> 
+                                </div>
+                            </div>
+                            {/if}
+
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input type="text" name="starttime" placeholder="开始时间" value="{:input('starttime')}" class="input-sm form-control"> 
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input type="text" name="endtime" placeholder="结束时间" value="{:input('endtime')}" class="input-sm form-control"> 
+                                </div>
+                            </div>
+
+                            <div class="col-sm-1">
+                                <div class="input-group">
+                                    <select name="order_status" class="form-control">
+                                        {if input('order_status')}
+                                        <option value="{:input('order_status')}">
+                                            
+                                            {$order_status[input('order_status')]['name']}
+
+                                        </option>
+                                        {/if}
+                                        <option value="">全部状态</option>
+                                        {foreach $order_status as $code => $content}
+
+                                        <option value="{$code}">{$content.name}</option>
+
+                                        {/foreach}
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input type="text" name="order_id" placeholder="订单号" value="{:input('order_id')}" class="input-sm form-control"> 
+                                </div>
+                            </div>
+
+                            <div class="col-sm-1">
+                                <div class="input-group">
+                                    <input type="text" name="payway_id" placeholder="通道ID" value="{:input('payway_id')}" class="input-sm form-control"> 
+                                </div>
+                            </div>
+
+                            <div class="col-sm-1">
+                                <select class="form-control" name="belong">
+                                    
+                                <option value="">所有所属人</option>
+
+                                {foreach $payway_belong_list as $payway_belong}
+
+                                <option value="{$payway_belong}">{$payway_belong}</option>
+
+                                {/foreach}
+
+                                </select>
+                            </div>
+
+                            <div class="col-sm-1">
+
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-sm btn-primary"> 搜索</button> 
+                                    </span>
+                            </div>
+
+                        </form>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>创建商户</th>
+                                        <th>订单号</th>
+                                        {if in_array(session('admin.pos'),[0,9]) }<th>通道ID</th>{/if}
+                                        <th>支付费用-实际到账</th>
+                                        <th>支付方式</th>
+                                        <th>创建时间</th>
+                                        <th>支付时间</th>
+                                        <th>状态</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {foreach $list as $data}
+                                    <tr>
+
+                                        <td>{$data.id}</td>
+                                        <td>{$data.username}</td>
+                                        <td onclick="order_id_detials('{$data.order_id}','{$data.payway_order_id}','{$data.transaction_id}');">{$data.order_id}</td>
+                                        {if in_array(session('admin.pos'),[0,9]) }<td>{$data.payway_id}</td>{/if}
+                                        <td>{$data.fee/100} - <label {if $data.status == 1 and $data.fee != $data.act_fee}style="color:red;"{/if}>{$data.act_fee/100}</label></td>
+                                        <td>{$data.method}({$data.agent_type == 'mobile' ? '手机' : '电脑'})</td>
+                                        <td>{$data.create_time}</td>
+                                        <td>{if strtotime($data.pay_time) > 0} {$data.pay_time} {/if}</td>
+                                        <td class="orderStatus">
+                                        
+                                            <!--{//if $data.status == '-2' and session('admin.pos') == '9' }-->
+
+                                            <!--    <button class="btn btn-danger btn-xs" onclick="confirm_order('{//$data.order_id}');">{//$order_status[$data.status]['name']}</button>-->
+
+                                            <!--{//else /}-->
+
+	                                                {if  $data.status=='' }
+	                                                    <button class="btn btn-success btn-xs"
+	                                                    onclick="confirm_status(this , '{$data.order_id}','1');"> {$order_status[1]['name']}
+	                                                    </button>
+	                                                    <button class="btn btn-danger btn-xs"
+	                                                    onclick="confirm_status(this , '{$data.order_id}','-2');"> {$order_status[-2]['name']}
+	                                                    </button>
+	                                                {else /}
+	                                                    <font color='<?php echo $data['status']=='1'?'green':'red'; ?>'>{$order_status[$data.status]['name']}</font>
+	                                                {/if}
+
+                                            <!--{///if}-->
+
+                                        </td>
+
+                                    </tr>
+                                    {/foreach}
+                                </tbody>
+                            </table>
+                        </div>
+                        {$list->render()}
+                    </div>
+                    共计【{$sum_fee/100}】元
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="success_order_div" style="display: none;padding: 10px;">
+        <form action="{:url('payorder/success_deal')}">
+            <input type="text" class="form-control" name="order_id" id="success_order_id" style="margin:10px 0;">
+            <input type="text" class="form-control" name="sn" placeholder="商户单号" style="margin:10px 0;">
+            <input type="text" class="form-control" name="trade_no" placeholder="交易单号" style="margin:10px 0;">
+            <input type="text" class="form-control" name="total_amount" placeholder="实际到账金额" style="margin:10px 0;">
+            <button  style="margin:10px 0;" class="btn btn-info btn-block">确认</button>
+        </form>
+    </div>
+
+
+{include file="base/js" /}
+<script type="text/javascript" src="__STATIC__/laydate/laydate.js"></script>
+
+<script src="__STATIC__/hplus/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+<script src="__STATIC__/hplus/js/plugins/switchery/switchery.js"></script>
+
+<script src="__STATIC__/hplus/js/plugins/cropper/cropper.min.js"></script>
+
+<script src="__STATIC__/hplus/js/demo/form-advanced-demo.js"></script>
+
+
+
+<script type="text/javascript">
+
+    laydate.render({
+      elem: '[name=starttime]', //指定元素
+      type:'datetime'
+    });    laydate.render({
+      elem: '[name=endtime]', //指定元素
+      type:'datetime'
+    });
+
+    var refresh_interval;
+
+    if( $('.js-switch').is(':checked') ) autorefresh( {:input('autorefresh')} );
+
+    $('.js-switch').change(function(){
+
+        if( $(this).is(':checked') ){
+
+            refresh_interval_sec = $('#refresh_interval').val();
+
+            if(refresh_interval_sec < 1){
+
+                layer.alert('刷新间隔最小为5秒');
+
+                $(this).removeAttr('checked');
+
+
+
+                return false;
+
+            }else{
+
+                autorefresh(refresh_interval_sec);
+                
+            }
+
+        }else{
+
+            clearTimeout(refresh_interval);
+            
+        }
+
+    })
+
+    function autorefresh(refresh_interval_sec){
+
+        refresh_interval = setTimeout(function(){
+
+            {if input()}
+
+                href = '&autorefresh=' + refresh_interval_sec;
+
+            {else /}
+
+                href = '?autorefresh=' + refresh_interval_sec;
+
+            {/if}
+
+            location.href = href;
+
+        },refresh_interval_sec*1000 );
+
+    }
+
+    function order_id_detials(order_id,payway_order_id,transaction_id){
+
+        var str = '平台订单号：' + order_id + '<br/>';
+
+            str += '商户单号：' + payway_order_id + '<br/>';
+
+            str += '交易单号：' + transaction_id + '<br/>';
+
+        layer.alert(str);
+
+    }
+
+    function confirm_order(order_id){
+
+        $('#success_order_id').val(order_id);
+
+        layer.open({
+
+            type:1,
+            content:$('#success_order_div'),
+            area:["{if is_mobile()}75%{else/}25%{/if}",'40%'],
+            title:'将该订单处理为成功'
+
+        })
+
+    }
+
+
+    //确定更改订单状态
+    function confirm_status(obj , orderid , status){
+        ///console.log(orderid , status);
+		if( confirm('确定更改订单状态吗?') === false ) { return false; }
+        $.ajax({
+            url:'/admin/payorder/update_order_status',
+            type:'post',
+            data:{orderid:orderid,status:status},
+            dataType:'json',
+            success:function(res){
+                // console.log(res);
+                //alert(res.msg);
+                if(res.flag=='1000'){
+                    var text = (status=='1') ? "<font color='green'>{$order_status[1]['name']}</font>" : "<font color='red'>{$order_status[-2]['name']}</font>";
+                    $(obj).parent('td').html(text);
+                }else{
+
+                }
+            },
+            error:function(){
+
+            }
+        });
+    }
+
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+
+ <!DOCTYPE html>
+<html>
+
+{include file="base/head" /}
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>账号编辑</h5> &nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-xs btn-success" href="{:url('administrator/index')}"> <i class="fa fa-plus"></i> 返回账号列表</a>
+                    </div>
+                    <div class="ibox-content">
+                        <form class="form-horizontal" method="post" action="{:url('administrator/create')}">
+
+                            <input type="hidden" name="id" value="{$id}">
+
+                            {if !$id}
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">帐号：</label>
+
+                                <div class="col-sm-8">
+                                    <input type="text" placeholder="帐号" class="form-control" name="username">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">密码：</label>
+
+                                <div class="col-sm-8">
+                                    <input type="password" placeholder="密码" class="form-control" name="password">
+                                </div>
+                            </div>
+
+                            {/if}
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">支付宝原生费率：</label>
+
+                                <div class="col-sm-8">
+                                    <input type="text" placeholder="支付宝原生费率" class="form-control" name="fixed_money_ali_percent_fee" value="{$id ? $info.fixed_money_ali_percent_fee : ''}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">微信原生费率：</label>
+
+                                <div class="col-sm-8">
+                                    <input type="text" placeholder="微信原生费率" class="form-control" name="fixed_money_wechat_percent_fee" value="{$id ? $info.fixed_money_wechat_percent_fee : ''}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">支付宝固码费率：</label>
+
+                                <div class="col-sm-8">
+                                    <input type="text" placeholder="支付宝固码费率" class="form-control" name="unfixed_money_ali_percent_fee" value="{$id ? $info.unfixed_money_ali_percent_fee : ''}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">微信固码费率：</label>
+
+                                <div class="col-sm-8">
+                                    <input type="text" placeholder="微信固码费率" class="form-control" name="unfixed_money_wechat_percent_fee" value="{$id ? $info.unfixed_money_wechat_percent_fee : ''}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">身份：</label>
+
+                                <div class="col-sm-8">
+                                    <select name="pos" class="form-control">
+
+                                        {if $id}<option value="{$info.pos}">{$administrator_pos[$info.pos]['name']}</option>{/if}
+
+                                        <option value="0">{$administrator_pos[0]['name']}</option>
+                                        <option value="1">{$administrator_pos[1]['name']}</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">备注：</label>
+
+                                <div class="col-sm-8">
+                                    <input type="text" placeholder="备注" class="form-control" name="mark" value="{$id ? $info.mark : ''}">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">是否启用</label>
+                                <div class="checkbox i-checks">
+                                    <label><input type="radio" value="1" name="is_active" {if $id} {if $info.is_active} checked {/if}{/if}> <i></i> 启用</label>
+                                    <label><input type="radio" value="0" name="is_active" {if $id} {if !$info.is_active} checked {/if}{/if}> <i></i> 禁用</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-8">
+                                    <button class="btn btn-sm btn-white" type="submit">确  认</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+{include file="base/js" /}
+
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+</body>
+
+</html>
