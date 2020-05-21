@@ -1,8 +1,2 @@
 <?php
-// 定义一个变量
-# 定义一个变量
-$a = "张先生";
-# 在生成一个变量
-$b = "欢迎{$a}入住！";
-
-echo $b;
+$conn = mysqli_connect("localhost", "root", "root");

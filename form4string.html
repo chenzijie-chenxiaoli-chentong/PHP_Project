@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<HEAD><h2>GoodHome在线订房表。</h2><meta charset=utf-8></HEAD>
+<BODY>
+
+<form action="formstringhandler.php" method="post">
+<table>
+<tr bgcolor="#3399FF" >
+    <td>客户姓名:</td>
+    <td><input type="text" name="customername" size="20" /></td>
+</tr>
+<tr bgcolor="#CCCCCC" >
+    <td>客户性别：</td>
+    <td>
+     <select name="gender">
+        <option value="m">男</option>
+        <option value="f">女</option>
+     </select>
+  </td>
+</tr>
+<tr bgcolor="#3399FF" >
+    <td>到达时间:</td>
+    <td>
+     <select name="arrivaltime">
+        <option value="1">一天后</option>
+        <option value="2">两天后</option>
+        <option value="3">三天后</option>
+        <option value="4">四天后</option>
+        <option value="5">五天后</option>
+     </select>
+    </td>
+</tr>
+<tr bgcolor="#CCCCCC" >
+    <td>电话:</td>
+    <td><input type="text" name="phone" size="20" /></td>
+</tr>
+<tr bgcolor="#3399FF" >
+    <td>email:</td>
+    <td><input type="text" name="email" size="30" /></td>
+</tr>
+<tr bgcolor="#CCCCCC" >
+    <td>其他需求:</td>
+    <td> <textarea name="info" rows="10" cols="30">如果您有什么其他要求，请填在这里。</textarea>
+    </td>
+</tr>
+<tr bgcolor="#666666" >
+    <td align="center"><input type="submit" value="确认订房信息" /></td>
+</tr>
+</table>
+</form>
+</BODY>
+</HTML>
