@@ -10,6 +10,7 @@ class Ordernotify extends \think\Controller{
 	
 	//收银宝 支付成功后 , 回调接口
 	function index(){
+	
 		// $fs = fopen(__DIR__.'/test.txt','a') ;
 		// fwrite( $fs , print_r($_REQUEST,true) );
 		
@@ -40,13 +41,26 @@ class Ordernotify extends \think\Controller{
 
 	
 		$order_id = input('bizseq');
+		$method = (input('trxcode')=='VSP501') ? 'wechat' : 'ali';
 		$order  = model('PayOrder')->where(['order_id' => $order_id])->column('id');
 		//print_r($order);die;
 		if(!$order) die;
 		if( input('trxstatus') === '0000' ){  //支付成功
-			model('PayOrder')->where(['order_id' => $order_id])->update(['status'=>1]);
+			model('PayOrder')->where(['order_id' => $order_id])->update(['status'=>1,'method'=>$method]);
 		}else{
-			model('PayOrder')->where(['order_id' => $order_id])->update(['status'=>-2]);
+			model('PayOrder')->where(['order_id' => $order_id])->update(['status'=>-2,'method'=>$method]);
+		}
+		
+		$returl = model('PayOrder')->where(['order_id' => $order_id])->column('return_url');
+		if($returl){
+			$post = [
+				'order_id'=>$order_id,
+				'money'=> floatval( input('amount') / 100 ),
+				'trxday'=>input('trxday'),
+				'trxstatus'=>input('trxstatus'),//0000 表示成功
+				'trxresult'=>(input('trxstatus')=='0000') ? '交易成功' : '交易失败',
+			];
+			curl_request($returl[0],$post);
 		}
 		
 	
@@ -54,6 +68,16 @@ class Ordernotify extends \think\Controller{
 		
 		
 	}//end function
+	
+	
+	
+	
+	/*//模拟回调url
+	public function returl(){
+		
+		$fs = fopen(__DIR__.'/test.txt','a') ;
+		fwrite( $fs , print_r($_REQUEST,true) );
+	}*/
 	
 	
 	
