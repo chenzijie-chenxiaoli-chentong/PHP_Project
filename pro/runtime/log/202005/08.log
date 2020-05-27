@@ -1,0 +1,4 @@
+---------------------------------------------------------------
+[ 2020-05-08T18:54:10+08:00 ] 171.82.121.179 GET bafangrenpin.com/index.php/index/index/login.html
+[运行时间：0.020426s] [吞吐率：48.96req/s] [内存消耗：2,677.34kb] [文件加载：56]
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'pay'@'localhost' (using password: YES)[/www/wwwroot/pro/thinkphp/library/think/db/Connection.php:295]

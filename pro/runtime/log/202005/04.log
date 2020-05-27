@@ -1,0 +1,76 @@
+---------------------------------------------------------------
+[ 2020-05-04T14:31:47+08:00 ] 127.0.0.1 GET p.com/index.php/index/index/login.html
+[运行时间：0.116670s] [吞吐率：8.57req/s] [内存消耗：2,687.86kb] [文件加载：56]
+[ error ] [2002]SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: ��֪�������������� [D:\WWW\wwwroot\pro\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2020-05-04T14:34:49+08:00 ] 127.0.0.1 POST p.com/index/index/login.html
+[运行时间：0.093815s] [吞吐率：10.66req/s] [内存消耗：2,689.62kb] [文件加载：56]
+[ error ] [2002]SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: ��֪�������������� [D:\WWW\wwwroot\pro\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2020-05-04T14:38:14+08:00 ] 127.0.0.1 POST p.com/index/index/login.html
+[运行时间：0.071005s] [吞吐率：14.08req/s] [内存消耗：2,689.60kb] [文件加载：56]
+[ error ] [2002]SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: ��֪�������������� [D:\WWW\wwwroot\pro\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2020-05-04T14:40:13+08:00 ] 127.0.0.1 POST p.com/index/index/login.html
+[运行时间：0.089620s] [吞吐率：11.16req/s] [内存消耗：2,689.60kb] [文件加载：56]
+[ error ] [2002]SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: ��֪�������������� [D:\WWW\wwwroot\pro\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2020-05-04T14:40:19+08:00 ] 127.0.0.1 GET p.com/index/index/login.html
+[运行时间：0.089423s] [吞吐率：11.18req/s] [内存消耗：2,687.83kb] [文件加载：56]
+[ error ] [2002]SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: ��֪�������������� [D:\WWW\wwwroot\pro\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2020-05-04T14:40:24+08:00 ] 127.0.0.1 POST p.com/index/index/login.html
+[运行时间：0.057247s] [吞吐率：17.47req/s] [内存消耗：2,689.57kb] [文件加载：56]
+[ error ] [2002]SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: ��֪�������������� [D:\WWW\wwwroot\pro\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2020-05-04T14:41:31+08:00 ] 127.0.0.1 POST p.com/index/index/login.html
+[运行时间：0.083685s] [吞吐率：11.95req/s] [内存消耗：2,689.63kb] [文件加载：56]
+[ error ] [2002]SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: ��֪�������������� [D:\WWW\wwwroot\pro\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2020-05-04T14:45:54+08:00 ] 127.0.0.1 POST p.com/index/index/login.html
+[运行时间：0.084581s] [吞吐率：11.82req/s] [内存消耗：2,689.65kb] [文件加载：56]
+[ error ] [2002]SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: ��֪�������������� [D:\WWW\wwwroot\pro\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2020-05-04T15:34:53+08:00 ] 127.0.0.1 GET p.com/admin/payorder/index.html
+[运行时间：0.104777s] [吞吐率：9.54req/s] [内存消耗：3,286.41kb] [文件加载：69]
+[ error ] [0]类型错误: Too few arguments to function session(), 0 passed in D:\WWW\wwwroot\pro\runtime\temp\a0698453511247c08a235d5e4f44000b.php on line 153 and at least 1 expected[D:\WWW\wwwroot\pro\thinkphp\helper.php:294]
+---------------------------------------------------------------
+[ 2020-05-04T15:35:10+08:00 ] 127.0.0.1 GET p.com/admin/payorder/index.html
+[运行时间：0.075762s] [吞吐率：13.20req/s] [内存消耗：3,288.34kb] [文件加载：70]
+[ error ] [2]Use of undefined constant admin - assumed 'admin' (this will throw an Error in a future version of PHP)[D:\WWW\wwwroot\pro\runtime\temp\a0698453511247c08a235d5e4f44000b.php:153]
+---------------------------------------------------------------
+[ 2020-05-04T15:35:33+08:00 ] 127.0.0.1 GET p.com/admin/payorder/index.html
+[运行时间：0.099205s] [吞吐率：10.08req/s] [内存消耗：3,288.34kb] [文件加载：70]
+[ error ] [2]Use of undefined constant admin - assumed 'admin' (this will throw an Error in a future version of PHP)[D:\WWW\wwwroot\pro\runtime\temp\a0698453511247c08a235d5e4f44000b.php:153]
+---------------------------------------------------------------
+[ 2020-05-04T15:35:34+08:00 ] 127.0.0.1 GET p.com/admin/payorder/index.html
+[运行时间：0.094160s] [吞吐率：10.62req/s] [内存消耗：3,132.45kb] [文件加载：68]
+[ error ] [2]Use of undefined constant admin - assumed 'admin' (this will throw an Error in a future version of PHP)[D:\WWW\wwwroot\pro\runtime\temp\a0698453511247c08a235d5e4f44000b.php:153]
+---------------------------------------------------------------
+[ 2020-05-04T15:35:35+08:00 ] 127.0.0.1 GET p.com/admin/payorder/index.html
+[运行时间：0.084604s] [吞吐率：11.82req/s] [内存消耗：3,132.45kb] [文件加载：68]
+[ error ] [2]Use of undefined constant admin - assumed 'admin' (this will throw an Error in a future version of PHP)[D:\WWW\wwwroot\pro\runtime\temp\a0698453511247c08a235d5e4f44000b.php:153]
+---------------------------------------------------------------
+[ 2020-05-04T15:35:36+08:00 ] 127.0.0.1 GET p.com/admin/payorder/index.html
+[运行时间：0.084134s] [吞吐率：11.89req/s] [内存消耗：3,132.45kb] [文件加载：68]
+[ error ] [2]Use of undefined constant admin - assumed 'admin' (this will throw an Error in a future version of PHP)[D:\WWW\wwwroot\pro\runtime\temp\a0698453511247c08a235d5e4f44000b.php:153]
+---------------------------------------------------------------
+[ 2020-05-04T15:35:37+08:00 ] 127.0.0.1 GET p.com/admin/payorder/index.html
+[运行时间：0.073443s] [吞吐率：13.62req/s] [内存消耗：3,132.45kb] [文件加载：68]
+[ error ] [2]Use of undefined constant admin - assumed 'admin' (this will throw an Error in a future version of PHP)[D:\WWW\wwwroot\pro\runtime\temp\a0698453511247c08a235d5e4f44000b.php:153]
+---------------------------------------------------------------
+[ 2020-05-04T15:35:41+08:00 ] 127.0.0.1 GET p.com/admin/payorder/index.html
+[运行时间：0.055639s] [吞吐率：17.97req/s] [内存消耗：3,132.45kb] [文件加载：68]
+[ error ] [2]Use of undefined constant admin - assumed 'admin' (this will throw an Error in a future version of PHP)[D:\WWW\wwwroot\pro\runtime\temp\a0698453511247c08a235d5e4f44000b.php:153]
+---------------------------------------------------------------
+[ 2020-05-04T17:15:35+08:00 ] 127.0.0.1 GET p.com/admin/payorder/index.html
+[运行时间：0.073025s] [吞吐率：13.69req/s] [内存消耗：3,136.85kb] [文件加载：68]
+[ error ] [8]未定义数组下标: 0[D:\WWW\wwwroot\pro\runtime\temp\a0698453511247c08a235d5e4f44000b.php:159]
+---------------------------------------------------------------
+[ 2020-05-04T17:16:22+08:00 ] 127.0.0.1 GET p.com/admin/payorder/index.html
+[运行时间：0.082516s] [吞吐率：12.12req/s] [内存消耗：3,296.74kb] [文件加载：70]
+[ error ] [8]未定义数组下标: 0[D:\WWW\wwwroot\pro\runtime\temp\a0698453511247c08a235d5e4f44000b.php:159]
+---------------------------------------------------------------
+[ 2020-05-04T17:16:24+08:00 ] 127.0.0.1 GET p.com/admin/payorder/index.html
+[运行时间：0.071259s] [吞吐率：14.03req/s] [内存消耗：3,136.85kb] [文件加载：68]
+[ error ] [8]未定义数组下标: 0[D:\WWW\wwwroot\pro\runtime\temp\a0698453511247c08a235d5e4f44000b.php:159]

@@ -1,0 +1,4 @@
+---------------------------------------------------------------
+[ 2020-05-26T11:47:06+08:00 ] 114.245.57.255 POST pay.bafangrenpin.com/index/test/newpay
+[运行时间：0.023746s] [吞吐率：42.11req/s] [内存消耗：2,954.69kb] [文件加载：66]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'method' cannot be null[/www/wwwroot/pro/thinkphp/library/think/db/Connection.php:453]

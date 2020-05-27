@@ -1,0 +1,184 @@
+---------------------------------------------------------------
+[ 2020-05-15T11:08:07+08:00 ] 59.173.106.98 POST www.bafangrenpin.com/index/test/newpay
+[运行时间：0.029108s] [吞吐率：34.35req/s] [内存消耗：3,123.91kb] [文件加载：67]
+[ error ] [8]未定义变量: url[/www/wwwroot/pro/runtime/temp/5fa74eb13e1d20810947ecf477683f1d.php:44]
+---------------------------------------------------------------
+[ 2020-05-15T11:11:20+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/test/newpay
+[运行时间：0.025798s] [吞吐率：38.76req/s] [内存消耗：2,907.81kb] [文件加载：64]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'method' cannot be null[/www/wwwroot/pro/thinkphp/library/think/db/Connection.php:453]
+---------------------------------------------------------------
+[ 2020-05-15T11:11:28+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/test/newpay
+[运行时间：0.023018s] [吞吐率：43.44req/s] [内存消耗：2,907.81kb] [文件加载：64]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'method' cannot be null[/www/wwwroot/pro/thinkphp/library/think/db/Connection.php:453]
+---------------------------------------------------------------
+[ 2020-05-15T11:13:16+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/test/newpay
+[运行时间：0.023253s] [吞吐率：43.01req/s] [内存消耗：2,907.81kb] [文件加载：64]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'method' cannot be null[/www/wwwroot/pro/thinkphp/library/think/db/Connection.php:453]
+---------------------------------------------------------------
+[ 2020-05-15T11:42:28+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/test
+[运行时间：0.011448s] [吞吐率：87.35req/s] [内存消耗：1,375.35kb] [文件加载：43]
+[ error ] [0]致命错误: Class 'app\index\controller\Base' not found[/www/wwwroot/pro/application/index/controller/Test.php:4]
+---------------------------------------------------------------
+[ 2020-05-15T11:55:16+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/admin/payorder/index.html
+[运行时间：0.027053s] [吞吐率：36.96req/s] [内存消耗：3,291.41kb] [文件加载：68]
+[ error ] [0]语法解析错误: syntax error, unexpected 'else' (T_ELSE)[/www/wwwroot/pro/runtime/temp/64c2b3a495bc2692ffd7282c839e8118.php:157]
+---------------------------------------------------------------
+[ 2020-05-15T11:56:06+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/admin/payorder/index.html
+[运行时间：0.027120s] [吞吐率：36.87req/s] [内存消耗：3,309.16kb] [文件加载：70]
+[ error ] [8]未定义数组索引: [/www/wwwroot/pro/runtime/temp/64c2b3a495bc2692ffd7282c839e8118.php:155]
+---------------------------------------------------------------
+[ 2020-05-15T11:56:43+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/admin/payorder/index.html
+[运行时间：0.026995s] [吞吐率：37.04req/s] [内存消耗：3,309.22kb] [文件加载：70]
+[ error ] [8]未定义数组索引: [/www/wwwroot/pro/runtime/temp/64c2b3a495bc2692ffd7282c839e8118.php:155]
+---------------------------------------------------------------
+[ 2020-05-15T11:58:05+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/admin/payorder/index.html
+[运行时间：0.026559s] [吞吐率：37.65req/s] [内存消耗：3,291.41kb] [文件加载：68]
+[ error ] [0]语法解析错误: syntax error, unexpected 'else' (T_ELSE)[/www/wwwroot/pro/runtime/temp/64c2b3a495bc2692ffd7282c839e8118.php:157]
+---------------------------------------------------------------
+[ 2020-05-15T11:59:13+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/admin/payorder/index.html
+[运行时间：0.026853s] [吞吐率：37.24req/s] [内存消耗：3,291.41kb] [文件加载：68]
+[ error ] [0]语法解析错误: syntax error, unexpected 'else' (T_ELSE)[/www/wwwroot/pro/runtime/temp/64c2b3a495bc2692ffd7282c839e8118.php:158]
+---------------------------------------------------------------
+[ 2020-05-15T11:59:34+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/admin/payorder/index.html
+[运行时间：0.027005s] [吞吐率：37.03req/s] [内存消耗：3,309.22kb] [文件加载：70]
+[ error ] [8]未定义数组索引: [/www/wwwroot/pro/runtime/temp/64c2b3a495bc2692ffd7282c839e8118.php:156]
+---------------------------------------------------------------
+[ 2020-05-15T12:09:49+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/admin/payway/create/id/1.html
+[运行时间：0.023631s] [吞吐率：42.32req/s] [内存消耗：3,015.22kb] [文件加载：65]
+[ error ] [8]未定义数组索引: appid[/www/wwwroot/pro/runtime/temp/87d9339f80bd9db7adedf9bbc171c353.php:76]
+---------------------------------------------------------------
+[ 2020-05-15T12:12:38+08:00 ] 59.173.106.98 POST www.bafangrenpin.com/admin/payway/create_deal.html
+[运行时间：0.019668s] [吞吐率：50.84req/s] [内存消耗：2,781.41kb] [文件加载：59]
+[ error ] [2]A non-numeric value encountered[/www/wwwroot/pro/application/admin/controller/Payway.php:136]
+---------------------------------------------------------------
+[ 2020-05-15T12:15:45+08:00 ] 59.173.106.98 POST www.bafangrenpin.com/index/test/newpay
+[运行时间：0.025100s] [吞吐率：39.84req/s] [内存消耗：2,907.74kb] [文件加载：63]
+[ error ] [8]未定义数组索引: account[/www/wwwroot/pro/application/index/controller/Test.php:67]
+---------------------------------------------------------------
+[ 2020-05-15T15:58:03+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/ordernotify/index?name=wuzhu&age=18
+[运行时间：0.013166s] [吞吐率：75.95req/s] [内存消耗：1,747.14kb] [文件加载：50]
+[ error ] [2]fopen() expects at least 2 parameters, 1 given[/www/wwwroot/pro/application/index/controller/Ordernotify.php:15]
+---------------------------------------------------------------
+[ 2020-05-15T15:58:32+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/ordernotify/index?name=wuzhu&age=18
+[运行时间：0.013257s] [吞吐率：75.43req/s] [内存消耗：1,747.17kb] [文件加载：50]
+[ error ] [2]fwrite() expects parameter 1 to be resource, string given[/www/wwwroot/pro/application/index/controller/Ordernotify.php:16]
+---------------------------------------------------------------
+[ 2020-05-15T16:03:49+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/ordernotify/index?name=wuzhu&age=18
+[运行时间：0.013178s] [吞吐率：75.88req/s] [内存消耗：1,745.45kb] [文件加载：49]
+[ error ] [0]致命错误: Call to undefined function app\index\controller\files_exists()[/www/wwwroot/pro/application/index/controller/Ordernotify.php:16]
+---------------------------------------------------------------
+[ 2020-05-15T16:03:59+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/ordernotify/index?name=wuzhu&age=18
+[运行时间：0.013384s] [吞吐率：74.72req/s] [内存消耗：1,747.27kb] [文件加载：50]
+[ error ] [8]未定义变量: fs[/www/wwwroot/pro/application/index/controller/Ordernotify.php:17]
+---------------------------------------------------------------
+[ 2020-05-15T16:07:10+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/ordernotify/index?name=wuzhu&age=18
+[运行时间：0.013322s] [吞吐率：75.06req/s] [内存消耗：1,747.31kb] [文件加载：50]
+[ error ] [2]fopen(/www/wwwroot/pro/application/index/controller./test.txt): failed to open stream: No such file or directory[/www/wwwroot/pro/application/index/controller/Ordernotify.php:15]
+---------------------------------------------------------------
+[ 2020-05-15T16:08:10+08:00 ] 123.113.0.167 POST www.bafangrenpin.com/index/test/newpay
+[运行时间：0.021880s] [吞吐率：45.70req/s] [内存消耗：2,917.90kb] [文件加载：63]
+[ error ] [8]未定义数组下标: 4[/www/wwwroot/pro/application/index/controller/Test.php:51]
+---------------------------------------------------------------
+[ 2020-05-15T16:46:57+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/ordernotify/index?bizseq=2020051516201375085
+[运行时间：0.011187s] [吞吐率：89.39req/s] [内存消耗：1,349.26kb] [文件加载：42]
+[ error ] [0]语法解析错误: syntax error, unexpected 'model' (T_STRING)[/www/wwwroot/pro/application/index/controller/Ordernotify.php:48]
+---------------------------------------------------------------
+[ 2020-05-15T16:48:34+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/ordernotify/index?bizseq=2020051516201375085
+[运行时间：0.019268s] [吞吐率：51.90req/s] [内存消耗：2,697.56kb] [文件加载：57]
+[ error ] [0]类型错误: Too few arguments to function think\db\Query::column(), 0 passed in /www/wwwroot/pro/application/index/controller/Ordernotify.php on line 44 and at least 1 expected[/www/wwwroot/pro/thinkphp/library/think/db/Query.php:470]
+---------------------------------------------------------------
+[ 2020-05-15T16:49:30+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/ordernotify/index?bizseq=2020051516201375085
+[运行时间：0.011164s] [吞吐率：89.57req/s] [内存消耗：1,349.23kb] [文件加载：42]
+[ error ] [0]语法解析错误: syntax error, unexpected '}'[/www/wwwroot/pro/application/index/controller/Ordernotify.php:56]
+---------------------------------------------------------------
+[ 2020-05-15T17:07:39+08:00 ] 59.173.106.98 POST bafangrenpin.com/index/test/newpay
+[运行时间：0.028196s] [吞吐率：35.47req/s] [内存消耗：3,194.04kb] [文件加载：69]
+[ error ] [8]未定义变量: order_id[/www/wwwroot/pro/runtime/temp/5fa74eb13e1d20810947ecf477683f1d.php:77]
+---------------------------------------------------------------
+[ 2020-05-15T17:08:46+08:00 ] 59.173.106.98 POST bafangrenpin.com/index/test/newpay
+[运行时间：0.028504s] [吞吐率：35.08req/s] [内存消耗：3,194.24kb] [文件加载：69]
+[ error ] [8]未定义变量: order_id[/www/wwwroot/pro/runtime/temp/5fa74eb13e1d20810947ecf477683f1d.php:77]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:42+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020573s] [吞吐率：48.61req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:43+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020866s] [吞吐率：47.92req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:44+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020708s] [吞吐率：48.29req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:45+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020869s] [吞吐率：47.92req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:46+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020881s] [吞吐率：47.89req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:47+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020655s] [吞吐率：48.41req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:48+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020669s] [吞吐率：48.38req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:49+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020999s] [吞吐率：47.62req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:50+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020701s] [吞吐率：48.31req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:51+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.021025s] [吞吐率：47.56req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:52+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020737s] [吞吐率：48.22req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:53+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.021563s] [吞吐率：46.38req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:54+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020643s] [吞吐率：48.44req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:55+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020674s] [吞吐率：48.37req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:56+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020744s] [吞吐率：48.21req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:57+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020661s] [吞吐率：48.40req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:58+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.021573s] [吞吐率：46.35req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:26:59+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020864s] [吞吐率：47.93req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:27:00+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020706s] [吞吐率：48.30req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T17:27:01+08:00 ] 59.173.106.98 GET bafangrenpin.com/index/test/check_success.html?order_id=2020051517264050677
+[运行时间：0.020998s] [吞吐率：47.62req/s] [内存消耗：2,836.09kb] [文件加载：59]
+[ error ] [8]未定义数组索引: status[/www/wwwroot/pro/application/index/controller/Test.php:219]
+---------------------------------------------------------------
+[ 2020-05-15T19:35:38+08:00 ] 112.241.197.77 GET www.bafangrenpin.com/index/test/check_success.html?order_id=2020051517570837547
+[运行时间：0.020820s] [吞吐率：48.03req/s] [内存消耗：2,837.80kb] [文件加载：59]
+[ error ] [8]未定义数组下标: 0[/www/wwwroot/pro/application/index/controller/Test.php:219]

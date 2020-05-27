@@ -1,0 +1,4 @@
+---------------------------------------------------------------
+[ 2020-05-06T11:24:38+08:00 ] 127.0.0.1 POST test.com/index/index/login.html
+[è¿è¡Œæ—¶é—´ï¼š0.485926s] [ååç‡ï¼š2.06req/s] [å†…å­˜æ¶ˆè€—ï¼š2,689.80kb] [æ–‡ä»¶åŠ è½½ï¼š56]
+[ error ] [2002]SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: ²»ÖªµÀÕâÑùµÄÖ÷»ú¡£ [D:\phpstudy_pro\WWW\wwwroot\pro\thinkphp\library\think\db\Connection.php:295]

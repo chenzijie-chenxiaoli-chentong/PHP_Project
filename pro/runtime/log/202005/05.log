@@ -1,0 +1,20 @@
+---------------------------------------------------------------
+[ 2020-05-05T12:35:16+08:00 ] 127.0.0.1 POST p.com/index/index/login.html
+[运行时间：0.091538s] [吞吐率：10.92req/s] [内存消耗：2,683.69kb] [文件加载：56]
+[ error ] [2002]SQLSTATE[HY000] [2002] Connection refused[/Users/wuzhu/Desktop/WWW/wwwroot/pro/thinkphp/library/think/db/Connection.php:295]
+---------------------------------------------------------------
+[ 2020-05-05T13:22:23+08:00 ] 127.0.0.1 POST p.com/index/index/login.html
+[运行时间：0.076421s] [吞吐率：13.09req/s] [内存消耗：2,683.70kb] [文件加载：56]
+[ error ] [2002]SQLSTATE[HY000] [2002] Connection refused[/Users/wuzhu/Desktop/WWW/wwwroot/pro/thinkphp/library/think/db/Connection.php:295]
+---------------------------------------------------------------
+[ 2020-05-05T13:25:13+08:00 ] 127.0.0.1 GET p.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：61.090828s] [吞吐率：0.02req/s] [内存消耗：1,819.36kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005051324126547420047&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=7610700196db15d9d2cd79a49e833e37&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Operation timed out[/Users/wuzhu/Desktop/WWW/wwwroot/pro/application/index/controller/Test.php:63]
+---------------------------------------------------------------
+[ 2020-05-05T13:36:18+08:00 ] 127.0.0.1 GET p.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.113130s] [吞吐率：0.02req/s] [内存消耗：1,819.74kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005051335186262104988&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=9537068c311224a7bf3ed77a0843834d&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Operation timed out[/Users/wuzhu/Desktop/WWW/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-05T13:36:48+08:00 ] 127.0.0.1 GET p.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.120250s] [吞吐率：0.02req/s] [内存消耗：1,819.74kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005051335481368448823&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=4b6f350982d3758ee617a1f84c02edcf&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Operation timed out[/Users/wuzhu/Desktop/WWW/wwwroot/pro/application/index/controller/Test.php:62]

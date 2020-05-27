@@ -1,0 +1,196 @@
+---------------------------------------------------------------
+[ 2020-05-13T16:03:06+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.961573s] [吞吐率：0.02req/s] [内存消耗：1,822.96kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131602055031680739&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=9a0d5cff9578be5d0dfa747e6931def9&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:04:04+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=1&money=1
+[运行时间：60.149866s] [吞吐率：0.02req/s] [内存消耗：1,822.95kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131603049841104236&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=c6ca9abdea8c56b7355b5a055cda4011&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:04:08+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.022968s] [吞吐率：0.02req/s] [内存消耗：1,822.95kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131603082654368008&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=6c2d681d7ffd05845c9931eff722894d&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:04:09+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.079298s] [吞吐率：0.02req/s] [内存消耗：1,822.95kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131603097265873914&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=153f933d87ac00880e98896a9887ff1b&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:04:09+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.089009s] [吞吐率：0.02req/s] [内存消耗：1,822.95kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131603096666447636&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=24efd752009a0adedd3c722aad9f78a8&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:04:09+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.024580s] [吞吐率：0.02req/s] [内存消耗：1,822.95kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131603099080500463&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=f951d5ffd0fd75f78d8f85d507cd4e09&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:04:09+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.035214s] [吞吐率：0.02req/s] [内存消耗：1,822.95kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131603097646119108&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=f7784a82d59ef3f7ba0b96dfe942cf3f&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:04:10+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.036477s] [吞吐率：0.02req/s] [内存消耗：1,822.95kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131603104819605934&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=8407162f951709ab3034127326197f83&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:04:35+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=1&money=1
+[运行时间：60.101313s] [吞吐率：0.02req/s] [内存消耗：1,822.95kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131603358353640070&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=bef574d7bad53c8f224737c650edef30&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:04:48+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.033371s] [吞吐率：0.02req/s] [内存消耗：1,823.62kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131603489916582966&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=cd3b59cdcd0da128c76e6bc1f1799e75&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:05:13+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.040393s] [吞吐率：0.02req/s] [内存消耗：1,823.64kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131604132083147650&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=b228ebd94dea7243c30401532bea766d&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:05:13+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=1&money=1
+[运行时间：60.039773s] [吞吐率：0.02req/s] [内存消耗：1,822.98kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131604134961258871&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=24c1cfc5283a4a21926597b2e40ecf6b&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:06:01+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.038448s] [吞吐率：0.02req/s] [内存消耗：1,823.62kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131605015170634570&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=f9ee8877fa5ec366eb4ae7a564ca33d3&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:06:04+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.040170s] [吞吐率：0.02req/s] [内存消耗：1,823.62kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131605046321986243&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=9b0462454b277938d8e5639e6405b1a5&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:06:06+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.030306s] [吞吐率：0.02req/s] [内存消耗：1,823.62kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131605064154306137&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=9dbecaf30e0b9398103be62795e38c15&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:06:06+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.034880s] [吞吐率：0.02req/s] [内存消耗：1,823.62kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131605063957137304&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=bec25a6853672bbf31e5f09eda0b2612&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:06:07+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.030610s] [吞吐率：0.02req/s] [内存消耗：1,823.62kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131605075540088455&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=16318e19957a973e491f16bb6aca773a&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:06:07+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.032815s] [吞吐率：0.02req/s] [内存消耗：1,823.62kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131605078948888111&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=dc2ac09474783c624dab82c86a837fb5&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:06:11+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=1&money=1
+[运行时间：60.038468s] [吞吐率：0.02req/s] [内存消耗：1,822.95kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131605114067390753&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=95f0aaff452ebbdb3a3e2d56046ad575&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:06:55+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.095069s] [吞吐率：0.02req/s] [内存消耗：1,823.64kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131605551361510625&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=d38f9c19562cc16fc845a7ecc36636cf&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:06:56+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.033137s] [吞吐率：0.02req/s] [内存消耗：1,823.64kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131605566272857432&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=70e2c3deeed96f1db40d142f98dd8826&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:06:57+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=1
+[运行时间：60.034042s] [吞吐率：0.02req/s] [内存消耗：1,823.64kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131605572901683983&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=ea32c253c64fcef8ba3c4183d6b6f059&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:07:01+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=1&money=1
+[运行时间：60.039530s] [吞吐率：0.02req/s] [内存消耗：1,822.98kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131606018441677568&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=319153892da9e3c4c654884453154446&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:07:08+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=0&money=1
+[运行时间：60.034938s] [吞吐率：0.02req/s] [内存消耗：1,822.99kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131606089054254941&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=5d98dfbeb4ef8d9fb8d0560ccb8e024f&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:07:10+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=0&money=1
+[运行时间：60.029414s] [吞吐率：0.02req/s] [内存消耗：1,814.50kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131606109126432039&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=ada19786d2772e7485e3e603d05bdf4d&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:07:15+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.031433s] [吞吐率：0.02req/s] [内存消耗：1,823.66kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131606157099571308&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=c661f84f3320f4a29bd980b44dedf54d&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:07:17+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.030325s] [吞吐率：0.02req/s] [内存消耗：1,823.66kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131606178615071495&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=8767de0d8d09df177284e4c421284777&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:07:17+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.032712s] [吞吐率：0.02req/s] [内存消耗：1,823.66kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131606174836658566&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=f37800a65f933b76e254e000b9c02dcf&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:07:17+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.033601s] [吞吐率：0.02req/s] [内存消耗：1,823.66kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131606179544819862&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=fa14c42ec00d6f08f29ccc07d1e426f9&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:07:18+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.035019s] [吞吐率：0.02req/s] [内存消耗：1,823.66kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131606181280015859&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=2a4bc44218383762c696cf24d08c1e4c&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:07:32+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=0.1
+[运行时间：60.040354s] [吞吐率：0.02req/s] [内存消耗：1,815.23kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.flueneasy.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131606315794430376&amp;fee=10&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=90c0e2cf45057a0c49223af67080c6b7&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:27:27+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：63.855494s] [吞吐率：0.02req/s] [内存消耗：1,814.51kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131626236887414309&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=e5fbf92a226b03d1c996f2e17eef7c8b&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:27:50+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=0.1
+[运行时间：60.035485s] [吞吐率：0.02req/s] [内存消耗：1,815.44kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131626505850650929&amp;fee=10&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=74084031b350b9ac4a676c1b592dcaf9&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:36:36+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=0.1
+[运行时间：60.059243s] [吞吐率：0.02req/s] [内存消耗：1,823.39kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131635363244996603&amp;fee=10&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=68ce275f8c471bdf387afecccdc1f813&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:36:48+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=0.1
+[运行时间：60.075857s] [吞吐率：0.02req/s] [内存消耗：1,814.57kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131635487671556817&amp;fee=10&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=849ff7239aa86bcd0267304d01908531&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:46:55+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=0.1
+[运行时间：60.099238s] [吞吐率：0.02req/s] [内存消耗：1,814.90kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131645559849339705&amp;fee=10&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=09abbd0cb8703b893843e4e50ea8511b&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:58:12+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=0.1
+[运行时间：60.100527s] [吞吐率：0.02req/s] [内存消耗：1,823.54kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131657127086584793&amp;fee=10&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=6726eb012a408bfa489c084409ffc68e&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:58:26+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=0.1
+[运行时间：60.054401s] [吞吐率：0.02req/s] [内存消耗：1,823.46kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131657263794572099&amp;fee=10&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=3cdfd7e50cbf8b03efab693aedf22add&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:58:30+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=0.1
+[运行时间：60.095366s] [吞吐率：0.02req/s] [内存消耗：1,823.46kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131657301148950983&amp;fee=10&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=77c2f88c873eb2fcc1439efae7a02850&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:58:31+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=0.1
+[运行时间：60.068402s] [吞吐率：0.02req/s] [内存消耗：1,823.46kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131657318804470566&amp;fee=10&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=17e48c64ae5161c1ba68360f9c79212c&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T16:58:33+08:00 ] 123.113.0.167 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=0&money=0.1
+[运行时间：60.033711s] [吞吐率：0.02req/s] [内存消耗：1,814.97kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131657335235536414&amp;fee=10&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=a5ebd5f3f248aa3c0ce30bf6529589dd&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=0): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T17:09:41+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=1&money=1
+[运行时间：60.078007s] [吞吐率：0.02req/s] [内存消耗：1,814.21kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131708406658085353&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=b6e998613ff263444de6b24327e56d1b&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T17:10:16+08:00 ] 59.173.106.98 GET www.bafangrenpin.com/index/test/pay?method=ali&is_fixed_money=1&money=1
+[运行时间：60.071234s] [吞吐率：0.02req/s] [内存消耗：1,822.70kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131709162753219328&amp;fee=100&amp;method=ali&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=344d86e3a399aaee8e442869af4dfb05&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T17:11:51+08:00 ] 119.103.166.165 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.065364s] [吞吐率：0.02req/s] [内存消耗：1,814.23kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131710519296498518&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=d0f90df7398f33d25449e9b6d861d808&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T17:27:40+08:00 ] 119.103.166.165 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.102136s] [吞吐率：0.02req/s] [内存消耗：1,814.48kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131726405396189790&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=3d63a3e2c3f237195c8c573229bd587f&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T17:39:47+08:00 ] 119.103.166.165 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.096362s] [吞吐率：0.02req/s] [内存消耗：1,814.48kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131738476078066371&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=87b00d3fca0c8d99659f56a1cd72d60e&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T18:06:25+08:00 ] 112.241.197.77 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.097764s] [吞吐率：0.02req/s] [内存消耗：1,814.89kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131805257260013141&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=08c53663b0c31a28f42a668e9315dc0f&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T18:08:41+08:00 ] 112.241.197.77 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.068709s] [吞吐率：0.02req/s] [内存消耗：1,814.89kb] [文件加载：51]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131807411687502274&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=0e6b5cdb6921f784ec0dd5b02c877bf3&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
+---------------------------------------------------------------
+[ 2020-05-13T19:28:35+08:00 ] 119.103.166.165 GET www.bafangrenpin.com/index/test/pay?method=wechat&is_fixed_money=1&money=1
+[运行时间：60.089498s] [吞吐率：0.02req/s] [内存消耗：1,822.98kb] [文件加载：50]
+[ error ] [2]file_get_contents(http://api.bafangrenpin.com:8000/api/merchant/create.html?username=dont_delete&amp;order_id=202005131927359880514266&amp;fee=100&amp;method=wechat&amp;title=%E6%B5%8B%E8%AF%95%E6%94%AF%E4%BB%98test&amp;sign=55386961eccb0ac94af3a504bc344381&amp;agent_type=&amp;return_url=http%3A%2F%2Fbaidu.com&amp;is_fixed_money=1): failed to open stream: Connection timed out[/www/wwwroot/pro/application/index/controller/Test.php:62]
