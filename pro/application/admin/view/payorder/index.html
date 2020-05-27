@@ -17,8 +17,9 @@
                             <div class="col-md-1"><b>自动刷新间隔</b></div>
                             <div class="col-md-1"><input class="form-control" value="{if input('autorefresh')}{:input('autorefresh')}{/if}" placeholder="单位：秒" type="text" id="refresh_interval"></div>
                             <div class="col-md-1"><b>是否自动刷新</b></div>
-                            <div class="col-md-1"><input type="checkbox" class="js-switch" {if input('autorefresh')}checked{/if} /></div>
-
+                            <div class="col-md-1">
+                                <input type="checkbox" class="js-switch" {if input('autorefresh')}checked{/if}>
+                            </div>
                             
                         </div>
 
@@ -207,20 +208,12 @@
 
             refresh_interval_sec = $('#refresh_interval').val();
 
-            if(refresh_interval_sec < 1){
-
-                layer.alert('刷新间隔最小为5秒');
-
+            if(refresh_interval_sec < 3){
+                layer.alert('刷新间隔最小为3秒');
                 $(this).removeAttr('checked');
-
-
-
                 return false;
-
             }else{
-
                 autorefresh(refresh_interval_sec);
-                
             }
 
         }else{
@@ -234,17 +227,8 @@
     function autorefresh(refresh_interval_sec){
 
         refresh_interval = setTimeout(function(){
-
-            {if input()}
-
-                href = '&autorefresh=' + refresh_interval_sec;
-
-            {else /}
-
-                href = '?autorefresh=' + refresh_interval_sec;
-
-            {/if}
-console.log(href);
+            href = '&autorefresh=' + refresh_interval_sec;
+            console.log(href);
             location.href = href;
 
         },refresh_interval_sec*1000 );

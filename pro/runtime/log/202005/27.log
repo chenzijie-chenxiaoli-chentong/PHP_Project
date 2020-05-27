@@ -1,0 +1,4 @@
+---------------------------------------------------------------
+[ 2020-05-27T21:12:27+08:00 ] 127.0.0.1 POST pay.test/admin/index/login.html
+[运行时间：2.943781s] [吞吐率：0.34req/s] [内存消耗：2,725.60kb] [文件加载：58]
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'pay'@'localhost' (using password: YES)[X:\PhpstormProjects\PHP_Project\pro\thinkphp\library\think\db\Connection.php:295]
