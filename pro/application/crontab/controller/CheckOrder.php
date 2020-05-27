@@ -16,7 +16,7 @@ class CheckOrder extends Command{
 	
 	protected function configure()
     {
-        $this->setName('checkorder')->setDescription('定时查看订单是否支付成功');
+        $this->setName('checkorder')->setDescription('定时清理过期订单');
     }
     
     
