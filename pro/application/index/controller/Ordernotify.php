@@ -11,8 +11,9 @@ class Ordernotify extends \think\Controller{
 	//收银宝 支付成功后 , 回调接口
 	function index(){
 	
-		// $fs = fopen(__DIR__.'/test.txt','a') ;
-		// fwrite( $fs , print_r($_REQUEST,true) );
+		/*$fs = fopen(__DIR__.'/test.txt','a') ;
+		fwrite( $fs , print_r($_REQUEST,true) );
+		die;*/
 		
 // Array
 // (
@@ -42,9 +43,11 @@ class Ordernotify extends \think\Controller{
 	
 		$order_id = input('bizseq');
 		$method = (input('trxcode')=='VSP501') ? 'wechat' : 'ali';
-		$order  = model('PayOrder')->where(['order_id' => $order_id])->column('id');
+		$order  = model('PayOrder')->where(['order_id' => $order_id])->column('*');
+		$order = array_pop($order);
 		//print_r($order);die;
-		if(!$order) die;
+		//$fs = fopen(__DIR__.'/test.txt','a') ;fwrite( $fs , print_r( $order,true) );
+		if(!$order['id'] || ($order['status'] =='1')) die;
 		if( input('trxstatus') === '0000' ){  //支付成功
 			model('PayOrder')->where(['order_id' => $order_id])->update(['status'=>1,'method'=>$method]);
 		}else{

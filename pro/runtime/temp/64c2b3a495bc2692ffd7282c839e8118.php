@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"/www/wwwroot/pro/public/../application/admin/view/payorder/index.html";i:1590500879;s:54:"/www/wwwroot/pro/application/admin/view/base/head.html";i:1558411548;s:52:"/www/wwwroot/pro/application/admin/view/base/js.html";i:1558020052;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"/www/wwwroot/pro/public/../application/admin/view/payorder/index.html";i:1590591759;s:54:"/www/wwwroot/pro/application/admin/view/base/head.html";i:1558411548;s:52:"/www/wwwroot/pro/application/admin/view/base/js.html";i:1558020052;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -244,9 +244,9 @@
 
             refresh_interval_sec = $('#refresh_interval').val();
 
-            if(refresh_interval_sec < 1){
+            if(refresh_interval_sec < 3){
 
-                layer.alert('刷新间隔最小为5秒');
+                layer.alert('刷新间隔最小为3秒');
 
                 $(this).removeAttr('checked');
 
@@ -271,17 +271,8 @@
     function autorefresh(refresh_interval_sec){
 
         refresh_interval = setTimeout(function(){
-
-            <?php if(input()): ?>
-
-                href = '&autorefresh=' + refresh_interval_sec;
-
-            <?php else: ?>
-
-                href = '?autorefresh=' + refresh_interval_sec;
-
-            <?php endif; ?>
-console.log(href);
+            href = '?autorefresh=' + refresh_interval_sec;
+			console.log(href);
             location.href = href;
 
         },refresh_interval_sec*1000 );

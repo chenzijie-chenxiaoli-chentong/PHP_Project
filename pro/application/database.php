@@ -19,7 +19,7 @@ return [
     'database'        => 'pay',
     // 用户名
      //'username'        => 'admin',
-    'username'        => 'root',
+    'username'        => 'pay',
     // 密码
      //'password'        => 'admin!',
     'password'        => 'pay123456',

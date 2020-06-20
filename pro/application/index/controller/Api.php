@@ -4,11 +4,14 @@ namespace app\index\controller;
 //use app\SaeQRcode;
 use Endroid\QrCode\QrCode;
 
+use think\Cache;
+
 class Api extends \think\Controller{
 	
 	private $key = 'sdl2fL3KH3J3G92327Kh';//密钥
 	
-	/*public function genUrl(){
+/*	public function genUrl(){
+		
 	//这是一个测试方法  无用
 		$order_id = date('YmdHis').rand(10000,99999);
 		
@@ -48,9 +51,20 @@ class Api extends \think\Controller{
 			$exist = model('PayOrder')->where(['order_id'=>$order_id])->column('id');
 			if($exist) { echo json_encode(['flag'=>'10005','msg'=>'订单号重复','info'=>'']);die; }
 			
+			$payway_list = Cache::get('payway_list');
+			if( $payway_list == false){
+				$payway_list = model('Payway')->column('id,payway,name,params','id');
+				if(empty($payway_list)) { echo json_encode(['flag'=>'10063','msg'=>'请添加商家二维码信息','info'=>'']);die; }
+				Cache::set('payway_list',$payway_list);
+			}
+		
+			$first = array_shift($payway_list);  //所有商家的支付二维码 按顺序展示  payway表中
+			Cache::set('payway_list',$payway_list);
 			
-			$payway_list = model('Payway')->column('id,payway,name,params','id');
-			$payway_id = 1;//收银宝
+			// print_r($first);die;
+			
+			
+			//$payway_id = 1;//收银宝  todo 固定展示二维码用
 			
 			model('PayOrder')->insert([
 				'username'=>'abc', 
@@ -62,7 +76,7 @@ class Api extends \think\Controller{
 				'qr_code'=>'', 
 				'qr_code_image_url'=>'', 
 				'notify_url'=>'', 
-				'payway_id'=> $payway_id , 
+				'payway_id'=> $first['id'] , 
 				'agent_code'=>'', 
 				'agent_type'=>'mobile', 
 				'payway_order_id'=>$order_id, 
@@ -81,9 +95,9 @@ class Api extends \think\Controller{
 			];
 		
 		
-		if($payway_list[$payway_id]['payway'] == 'shouyinbao'){  //收银宝
+		if($first['payway'] == 'shouyinbao'){  //收银宝
 			
-			$arr = json_decode($payway_list[$payway_id]['params'] , true);
+			$arr = json_decode($first['params'] , true);
 			// print_r($arr);die;
 			$appid =  $arr['appid'];  //收银宝appid
 			$md5Key = $arr['md5key'];//收银宝设置的md5密钥
@@ -98,9 +112,9 @@ class Api extends \think\Controller{
 			
 			$qrCode = new QrCode($url);//生成支付二维码
 			$qr_img = 'data:'.$qrCode->getContentType().';base64,'.base64_encode($qrCode->writeString());
-			//echo '<img src="'.$qr_img.'">';
-			//header('Content-Type: '.$qrCode->getContentType());
-			//echo $qrCode->writeString();
+			/*echo '<img src="'.$qr_img.'">';
+			header('Content-Type: '.$qrCode->getContentType());
+			echo $qrCode->writeString();die;*/
 			
 			$rData = ['qr_img'=>$qr_img,'expire'=>200];
 			

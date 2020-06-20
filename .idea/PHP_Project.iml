@@ -2,7 +2,16 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/pro/vendor/bacon/bacon-qr-code" />
       <excludeFolder url="file://$MODULE_DIR$/pro/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/pro/vendor/dasprid/enum" />
+      <excludeFolder url="file://$MODULE_DIR$/pro/vendor/endroid/qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/pro/vendor/khanamiryan/qrcode-detector-decoder" />
+      <excludeFolder url="file://$MODULE_DIR$/pro/vendor/myclabs/php-enum" />
+      <excludeFolder url="file://$MODULE_DIR$/pro/vendor/symfony/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/pro/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/pro/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/pro/vendor/symfony/property-access" />
       <excludeFolder url="file://$MODULE_DIR$/pro/vendor/topthink/think-captcha" />
       <excludeFolder url="file://$MODULE_DIR$/pro/vendor/topthink/think-helper" />
       <excludeFolder url="file://$MODULE_DIR$/pro/vendor/topthink/think-image" />
