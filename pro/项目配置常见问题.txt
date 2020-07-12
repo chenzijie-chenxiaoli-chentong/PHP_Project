@@ -34,3 +34,9 @@
 
 4.定时清理过期订单：
     添加定时shell脚本任务 5分钟执行一次：cd  /www/wwwroot/pro   &&    php   think   checkorder
+
+# 商城部署
+网站目录：
+    /www/wwwroot/bafangrenpin.com
+运行目录：
+    /www/server/stop
