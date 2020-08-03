@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:74:"/www/wwwroot/47.56.64.247/public/../application/admin/view/base/agent.html";i:1562420796;s:63:"/www/wwwroot/47.56.64.247/application/admin/view/base/head.html";i:1558411548;s:61:"/www/wwwroot/47.56.64.247/application/admin/view/base/js.html";i:1558020051;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:64:"/www/wwwroot/pr/public/../application/admin/view/base/agent.html";i:1596394088;s:53:"/www/wwwroot/pr/application/admin/view/base/head.html";i:1596394088;s:51:"/www/wwwroot/pr/application/admin/view/base/js.html";i:1596394089;}*/ ?>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

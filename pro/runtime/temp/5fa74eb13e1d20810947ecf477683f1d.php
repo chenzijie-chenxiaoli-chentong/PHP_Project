@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/www/wwwroot/pro/public/../application/index/view/test/newpay.html";i:1589537695;s:54:"/www/wwwroot/pro/application/admin/view/base/head.html";i:1558411548;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/www/wwwroot/pro/public/../application/index/view/test/newpay.html";i:1596397174;s:54:"/www/wwwroot/pro/application/admin/view/base/head.html";i:1596394088;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +35,9 @@
    
         <div  id="qrcode" style="height:260px;width:260px;margin:50px auto;"></div>
 		
-		<h3 id="pay_status" style="height:50px;width:200px;margin:0 auto;color:red;">订单过期倒计时：<label id="expire_seconds"></label>秒</h4>
+<!--		<h3 id="pay_status" style="height:50px;width:200px;margin:0 auto;color:red;">订单过期倒计时：<label id="expire_seconds"></label>秒</h3>-->
+		<h3 style="height:50px;width:500px;margin:0 auto;color:red;"><?php echo $payurl; ?></h3>
+
            
 </body>
 <!--<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>-->
@@ -44,9 +46,9 @@
 	
 </script>
 <script type="text/javascript">
-	var payurl = "<?php echo $payurl; ?>";
-    $('#qrcode').qrcode(payurl); //任意字符串
-    
+	// var payurl = "<?php echo $payurl; ?>";
+    // $('#qrcode').qrcode(payurl); //任意字符串
+
     // $('#qrcode').qrcode({
     //     render: "table",                  //table方式
     //     width: 220,                       //宽度

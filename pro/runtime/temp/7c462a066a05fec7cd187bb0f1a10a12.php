@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/www/wwwroot/pro/public/../application/index/view/index/login.html";i:1558058446;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/www/wwwroot/pro/public/../application/index/view/index/login.html";i:1596394082;}*/ ?>
 
 <!DOCTYPE html>
 <html lang="en">

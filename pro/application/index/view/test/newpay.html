@@ -12,7 +12,9 @@
    
         <div  id="qrcode" style="height:260px;width:260px;margin:50px auto;"></div>
 		
-		<h3 id="pay_status" style="height:50px;width:200px;margin:0 auto;color:red;">订单过期倒计时：<label id="expire_seconds"></label>秒</h4>
+<!--		<h3 id="pay_status" style="height:50px;width:200px;margin:0 auto;color:red;">订单过期倒计时：<label id="expire_seconds"></label>秒</h3>-->
+		<h3 style="height:50px;width:500px;margin:0 auto;color:red;">{$payurl}</h3>
+
            
 </body>
 <!--<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>-->
@@ -21,9 +23,9 @@
 	
 </script>
 <script type="text/javascript">
-	var payurl = "{$payurl}";
-    $('#qrcode').qrcode(payurl); //任意字符串
-    
+	// var payurl = "{$payurl}";
+    // $('#qrcode').qrcode(payurl); //任意字符串
+
     // $('#qrcode').qrcode({
     //     render: "table",                  //table方式
     //     width: 220,                       //宽度

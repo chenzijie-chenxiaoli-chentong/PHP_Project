@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:65:"/www/wwwroot/pro/public/../application/index/view/test/index.html";i:1589511289;s:54:"/www/wwwroot/pro/application/admin/view/base/head.html";i:1558411548;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:65:"/www/wwwroot/pro/public/../application/index/view/test/index.html";i:1596396279;s:54:"/www/wwwroot/pro/application/admin/view/base/head.html";i:1596394088;}*/ ?>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,16 +30,16 @@
 <br/>
 <br/>
 		<form action="test/newpay" method="POST">
-			<p>请选择支付方式</p>
-			<input type="radio" name="method" value="wechat">微信
-			<input type="radio" name="method" value="ali">支付宝<br/><br/><br/>
-			<p>请选择支付类型</p>
-			<input type="radio" name="is_fixed_money" value="1">原生
-			<input type="radio" name="is_fixed_money" value="0">固码<br/><br/><br/>
-			<p>请输入支付金额</p>
-			<input type="text" name="money">
+			<!--<p>请选择支付方式</p>-->
+			<!--<input type="radio" name="method" value="wechat">微信-->
+			<!--<input type="radio" name="method" value="ali">支付宝<br/><br/><br/>-->
+			<!--<p>请选择支付类型</p>-->
+			<!--<input type="radio" name="is_fixed_money" value="1">原生-->
+			<!--<input type="radio" name="is_fixed_money" value="0">固码<br/><br/><br/>-->
+<!--			<p>请输入支付金额</p>-->
+<!--			<input type="text" name="money">-->
 			<br/><br/><br/>
-			<button class="btn btn-info">确认支付</button>
+			<button class="btn btn-info">调用测试</button>
 		</form>
 
 </div>

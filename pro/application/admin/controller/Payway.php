@@ -68,10 +68,7 @@ class Payway extends Base{
 
 	}
 
-	/*
-	 * 新增修改通道帐户
-	 */
-
+    // 新增支付通道
 	function create(){
 
 		model('AdminUser')->auth('payway_create');
@@ -117,10 +114,7 @@ class Payway extends Base{
 
 	}
 
-	/*
-	 * 创建处理
-	 */
-
+    //创建处理：数据写入数据库
 	function create_deal(){
 
 		#model('AdminUser')->auth('payway_list');
@@ -207,22 +201,24 @@ class Payway extends Base{
 
 			$deal = model('Payway')->insert([
 
-				'payway'				=>	$payway,
-				'name'					=>	$name,
-				'user'					=>	$user,
-				'create_time'			=>	time(),
-				'is_active'				=>	$is_active,
-				'success_max_num'		=>	$success_max_num,
-				'success_max_money'		=>	$success_max_money,
-				'mark'					=>	$mark,
-				'belong'				=>	$belong,
-				'frequence'				=>	$frequence,
-				'max_failed_times'		=>	$max_failed_times,
-				'identify_id'			=>	$identify_id,
-				'is_wechat'				=>	in_array('wechat', $recive_way),
-				'is_ali'				=>	in_array('ali', $recive_way),
-				'params'				=>	json_encode($pay_params),
-				'is_fixed_money'		=>	$payway_conf[$payway]['is_fixed_money'],
+				'payway'				=>	$payway,  //渠道名称
+				'name'					=>	$name,  //通道名称
+				'user'					=>	$user,  //默认空
+                'last_use_no'           =>  0,  //默认0
+                'next_use_time'         =>  0,  //默认0
+				'create_time'			=>	time(),  //创建时间
+				'is_active'				=>	$is_active,  //是否启动：1启用
+				'success_max_num'		=>	$success_max_num,  //次数上限
+				'success_max_money'		=>	$success_max_money,  //金额上线
+				'mark'					=>	$mark,  //银行卡号
+				'belong'				=>	$belong,  //所属人
+				'frequence'				=>	$frequence,  //最小使用间隔
+				'max_failed_times'		=>	$max_failed_times,  //最大失败上限
+				'identify_id'			=>	$identify_id,  //标示ID
+				'is_wechat'				=>	in_array('wechat', $recive_way),  //微信
+				'is_ali'				=>	in_array('ali', $recive_way),  //支付宝
+				'params'				=>	json_encode($pay_params),  //二维码信息
+				'is_fixed_money'		=>	$payway_conf[$payway]['is_fixed_money'],  //固定金额
 
 			]);
 
@@ -234,10 +230,7 @@ class Payway extends Base{
 
 	}
 
-	/*
-	 * 删除
-	 */
-
+    // 删除支付通道
 	function delete(){
 
 		model('AdminUser')->auth('payway_list');

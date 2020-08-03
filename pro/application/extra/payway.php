@@ -1,29 +1,6 @@
 <?php
 return [
 
-	'shouqianba'					=>	[
-
-		'name'				=>	'收钱吧',
-		
-		'fields'			=>	[
-
-			'vendor_sn'		=>	'vendor_sn',
-			'vendor_key'	=>	'vendor_key',
-			'appid'			=>	'appid',
-			'code'			=>	'code',
-
-		],
-
-		'domain'					=>	'https://api.shouqianba.com',
-
-		'is_fixed_money'			=>	1,
-
-		'h5_domain'					=>	'https://m.wosai.cn/qr/gateway',
-
-		'order_expire_time'			=>	'300',
-
-	],
-
 	'shouyinbao'					=>	[
 
 		'name'				=>	'收银宝',
@@ -46,27 +23,27 @@ return [
 
 	],
 
-	'lakala'					=>	[
+    'bankcard'				=>	[
 
-		'name'				=>	'拉卡拉',
-		
-		'fields'			=>	[
+        'name'				=>	'银行卡',
 
-			'qr_code'		=>	'二维码信息',
-			'account'		=>	'账号',
-			'password'		=>	'密码'
+        'fields'			=>	[
 
-		],
+            'bankcard_num'  =>	'银行卡号',
+            'username'		=>	'账户名',
+            'accountbank'	=>	'开户行'
 
-		'domain'					=>	'',
+        ],
 
-		'is_fixed_money'			=>	0,
+        'domain'					=>	'',
 
-		'h5_domain'					=>	'https://m.wosai.cn/qr/gateway',
+        'is_fixed_money'			=>	0,
 
-		'order_expire_time'			=>	'300',
+        'h5_domain'					=>	'https://m.wosai.cn/qr/gateway',
 
-	],
+        'order_expire_time'			=>	'300',
+
+    ],
 
 
 ];
