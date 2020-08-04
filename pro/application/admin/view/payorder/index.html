@@ -111,7 +111,7 @@
                                         <th>支付方式</th>
                                         <th>创建时间</th>
                                         <th>支付时间</th>
-                                        <th>状态</th>
+                                        {if session('admin')}<th>状态</th>{/if}
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -126,28 +126,20 @@
                                         <td>{$data.method}({$data.agent_type == 'mobile' ? '手机' : '电脑'})</td>
                                         <td>{$data.create_time}</td>
                                         <td>{if strtotime($data.pay_time) > 0} {$data.pay_time} {/if}</td>
+                                        {if session('admin')}
                                         <td class="orderStatus">
-                                        
-                                            <!--{//if $data.status == '-2' and session('admin.pos') == '9' }-->
-
-                                            <!--    <button class="btn btn-danger btn-xs" onclick="confirm_order('{//$data.order_id}');">{//$order_status[$data.status]['name']}</button>-->
-
-                                            <!--{//else /}-->
-
-	                                                {if  $data.status=='' }
-	                                                    <button class="btn btn-success btn-xs"
-	                                                    onclick="confirm_status(this , '{$data.order_id}','1');"> {$order_status[1]['name']}
-	                                                    </button>
-	                                                    <button class="btn btn-danger btn-xs"
-	                                                    onclick="confirm_status(this , '{$data.order_id}','-2');"> {$order_status[-2]['name']}
-	                                                    </button>
-	                                                {else /}
-	                                                    <font color='<?php echo $data['status']=='1'?'green':'red'; ?>'>{$order_status[$data.status]['name']}</font>
-	                                                {/if}
-
-                                            <!--{///if}-->
-
+                                                {if  $data.status=='' }
+                                                    <button class="btn btn-success btn-xs"
+                                                    onclick="confirm_status(this , '{$data.order_id}','1');"> {$order_status[1]['name']}
+                                                    </button>
+                                                    <button class="btn btn-danger btn-xs"
+                                                    onclick="confirm_status(this , '{$data.order_id}','-2');"> {$order_status[-2]['name']}
+                                                    </button>
+                                                {else /}
+                                                    <font color='<?php echo $data['status']=='1'?'green':'red'; ?>'>{$order_status[$data.status]['name']}</font>
+                                                {/if}
                                         </td>
+                                        {/if}
 
                                     </tr>
                                     {/foreach}

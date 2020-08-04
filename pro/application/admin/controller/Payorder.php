@@ -9,13 +9,13 @@ class Payorder extends Base{
 
 		$my_pos = session('admin.pos');
 
-		if( $my_pos == 1 ) $where['agent_code'] = session('admin.agent_code');
-
-		if(! session('admin') and session('merchant') ) $where['username'] = session('merchant.username');
-
-		if( input('order_id') ) $where['order_id|payway_order_id|transaction_id'] = input('order_id');
-		if( input('username') ) $where['username'] = input('username');
-		if( input('payway_id') ) $where['payway_id'] = input('payway_id');
+//		if( $my_pos == 1 ) $where['agent_code'] = session('admin.agent_code');
+//
+//		if(! session('admin') and session('merchant') ) $where['username'] = session('merchant.username');
+//
+//		if( input('order_id') ) $where['order_id|payway_order_id|transaction_id'] = input('order_id');
+//		if( input('username') ) $where['username'] = input('username');
+//		if( input('payway_id') ) $where['payway_id'] = input('payway_id');
 
 		if( input('starttime') ){
 

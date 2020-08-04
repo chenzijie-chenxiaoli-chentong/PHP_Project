@@ -31,7 +31,8 @@ return [
 
             'bankcard_num'  =>	'银行卡号',
             'username'		=>	'账户名',
-            'accountbank'	=>	'开户行'
+            'accountbank'	=>	'开户行',
+            'phone'         =>  '手机号'
 
         ],
 
