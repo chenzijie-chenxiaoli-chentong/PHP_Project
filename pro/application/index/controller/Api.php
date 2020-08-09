@@ -156,7 +156,12 @@ class Api extends \think\Controller{
 				Cache::set('payway_list',$payway_list);
 			    }
 
+			$count = 1;
 			while (true) {
+			    // 循环十次找不到银行卡号就返回失败
+                if ($count >10){
+                    echo json_encode(['flag'=>'10002','msg'=>'没有可用通道','info'=>'']);die;
+                }
 
                 // 有缓存随机展示
                 $first = array_shift($payway_list);  //所有商家的支付二维码 按顺序展示  payway表中
@@ -195,6 +200,9 @@ class Api extends \think\Controller{
 
                     echo json_encode(['flag' => '10000', 'msg' => '成功', 'info' => $rData]);
                     die; //返回结果
+                    }
+                else{
+                    $count ++;
                 }
                 }
             }

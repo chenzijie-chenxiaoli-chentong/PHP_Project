@@ -5,18 +5,40 @@ namespace app\index\controller;
 	class Test extends Base{
 */
 use think\Cache;
+
+
 class Test extends \think\Controller{
 
-
 	function index(){
+        //获取url传递的参数
+        $username = input('username');
+        //将url传递的参数返回给html显示
+        $this->assign(['username'=>$username]);
 
+        //判断是否有权限调用
+        $usernames = model('Merchant')->column('id,username','id');  //查询数据库所有商户号
+
+
+        //判断访问账户是否在数据库中
+        if(! in_array($username, $usernames)){
+            echo json_encode(['flag'=>'10064','msg'=>'没有权限，请使用正确链接访问','info'=>'']);die;
+        }
+
+        //session传值
+        session_start(); //定义
+        $_SESSION['username'] = input('username'); //赋值
 		return view();
 
 	}
+
 	//银行卡测试通道 2020-08-02
      function newpay(){
         if($_SERVER['REQUEST_METHOD'] == 'GET') die;
-
+        //接收session值
+        session_start();
+        $username = $_SESSION['username'];
+        //接收html post传递过来的参数
+        //echo $_POST['username'];
         $order_id = date('YmdHis').rand(10000,99999);
         //查询数据
         //$payway_list = model('Payway')->column('id,payway,name,params', 'id');
@@ -31,7 +53,12 @@ class Test extends \think\Controller{
             // 写入缓存 把所有支付通道写入缓存
             Cache::set('payway_list',$payway_list);
         }
+        $count = 1;
         while (true) {
+            // 循环十次找不到银行卡号就返回失败
+            if ($count >10){
+                echo json_encode(['flag'=>'10002','msg'=>'没有可用通道','info'=>'']);die;
+            }
             // $first = array_shift($payway_list);  //所有商家的支付二维码 按顺序展示  payway表中
             // 有缓存随机展示
             $first = array_shift($payway_list);  //所有商家的支付二维码 按顺序展示  payway表中
@@ -40,14 +67,15 @@ class Test extends \think\Controller{
             if ($first['payway'] == 'bankcard') {  //银行卡
                 $arr = json_decode($first['params'], true);
                 //echo var_dump($arr);  //查看数据类型
-                $ar = '银行卡号：'.$arr['bankcard_num']. '账户名：'.$arr['username']. '开户行：'.$arr['accountbank'];
+                //$ar = '银行卡号：'.$arr['bankcard_num']. '账户名：'.$arr['username']. '开户行：'.$arr['accountbank'];
                 }
             else{
+                $count ++;
                 continue;
                 }
             // 写入订单
             model('PayOrder')->insert([
-                'username' => 'abc',
+                'username' => $username,
                 'order_id' => $order_id,
                 'fee' => floatval(0.01) * 100,
                 'method' => '' ?: 'wechat',
@@ -67,7 +95,7 @@ class Test extends \think\Controller{
                 'return_url' => '',
             ]);
             // 向页面传递数据
-            $this->assign(['payurl'=>$ar,'order_id'=>$order_id]);
+            $this->assign(['payurl'=>$arr,'order_id'=>$order_id]);
             return view();
 
         }

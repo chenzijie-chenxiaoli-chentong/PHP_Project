@@ -51,11 +51,13 @@
                     <li>
                         <a class="J_menuItem" href="{:url('admin/sms/index')}"> <span class="nav-label">对账管理</span></a>
                     </li>
+                    {if session('admin')}
                     <li>
                         <a class="J_menuItem" href="{:url('admin/payorder/index')}"> <span class="nav-label">订单管理</span></a>
                     </li>
+                    {/if}
                     <li>
-                        <a class="J_menuItem" href="https://www.showdoc.cc/paypay?page_id=2079238060404560"> <span class="nav-label">接入文档</span></a>
+                        <a class="J_menuItem" href=""> <span class="nav-label">接入文档</span></a>
                     </li>
 
                 </ul>

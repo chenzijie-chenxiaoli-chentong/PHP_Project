@@ -5,61 +5,64 @@
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     {include file="admin@base/head"}
 </head>
-<body  style="background:#f0f0f0">
+<body style="background:#f0f0f0">
+        <div  id="qrcode" style="height:50px;width:260px;margin:15px auto;"></div>
+        <!--<h3 id="pay_status" style="height:50px;width:200px;margin:0 auto;color:red;">订单过期倒计时：<label id="expire_seconds"></label>秒</h3>-->
+		<h3 style="height:50px;width:80%;margin:0 auto;color:#1ab394;"> 账户名：{$payurl['username']}</h3>
+        <h3 style="height:50px;width:80%;margin:0 auto;color:#1ab394;"> 开户行：{$payurl['accountbank']}</h3>
+        <h3 style="height:50px;width:80%;margin:0 auto;color:#1ab394;"> 银行卡号：{$payurl['bankcard_num']}</h3>
 
-   
-        <div  id="qrcode" style="height:260px;width:260px;margin:50px auto;"></div>
-		
-<!--		<h3 id="pay_status" style="height:50px;width:200px;margin:0 auto;color:red;">订单过期倒计时：<label id="expire_seconds"></label>秒</h3>-->
-		<h3 style="height:50px;width:500px;margin:0 auto;color:red;">{$payurl}</h3>
+        <div id="reload" style="height:50px;width:30%;margin:50px auto;color:#1ab394;">
+            <a class="btn btn-sm btn-primary" style="font-size: 15px" href="javascript:location.reload();">继续调用</a>
+        </div>
+        <div style="height:50px;width:100%;margin:50px auto;color:red; font-size: 18px;"><b>PS:一个卡号对应一笔订单，请勿多次使用，再次使用点击继续调用！！！</b></div>
 
-           
 </body>
 <!--<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>-->
 <script type='text/javascript' src='http://cdn.staticfile.org/jquery/2.1.4/jquery.min.js'></script>
 <script src='__STATIC__/qrcode/jquery.qrcode.min.js'></script>
 <script type="text/javascript">
-	// var payurl = "{$payurl}";
+	// var payurl = "{$payurl['bankcard_num']}";
     // $('#qrcode').qrcode(payurl); //任意字符串
 </script>
 
-<script type="text/javascript">
-    
-    expire_seconds = 200;
-	$('#expire_seconds').text(expire_seconds);
-	
-    Timer = setInterval(function(){
+<!--<script type="text/javascript">-->
+<!--    -->
+<!--    expire_seconds = 200;-->
+<!--	$('#expire_seconds').text(expire_seconds);-->
+<!--	-->
+<!--    Timer = setInterval(function(){-->
 
-        if(expire_seconds == 0){
-            
-            $.get("{:url('test/update_status')}",{order_id:'{$order_id}'},function(res){
-            
-	        });
-            
-            $('#pay_status').html('<p style="color:red;margin:0 auto;">该订单已过期</p>');
-            $('#qrcode').html('');
-            clearInterval(Timer);
-            alert('该订单已过期');
-            window.history.go(-1);
+<!--        if(expire_seconds == 0){-->
+<!--            -->
+<!--            $.get("{:url('test/update_status')}",{order_id:'{$order_id}'},function(res){-->
+<!--            -->
+<!--	        });-->
+<!--            -->
+<!--            $('#pay_status').html('<p style="color:red;margin:0 auto;">该订单已过期</p>');-->
+<!--            $('#qrcode').html('');-->
+<!--            clearInterval(Timer);-->
+<!--            alert('该订单已过期');-->
+<!--            window.history.go(-1);-->
 
-        }
+<!--        }-->
 
-        $.get("{:url('test/check_success')}",{order_id:'{$order_id}'},function(res){
-            
-            if( res.status == 1 ){  
-                
-	            $('#qrcode').html('');
-	            clearInterval(Timer);
-	            alert('支付成功！');
-	            window.history.go(-1);
-            }
-            
-        });
+<!--        $.get("{:url('test/check_success')}",{order_id:'{$order_id}'},function(res){-->
+<!--            -->
+<!--            if( res.status == 1 ){  -->
+<!--                -->
+<!--	            $('#qrcode').html('');-->
+<!--	            clearInterval(Timer);-->
+<!--	            alert('支付成功！');-->
+<!--	            window.history.go(-1);-->
+<!--            }-->
+<!--            -->
+<!--        });-->
 
-        $('#expire_seconds').text( --expire_seconds );
+<!--        $('#expire_seconds').text( &#45;&#45;expire_seconds );-->
 
-    },1000);
+<!--    },1000);-->
 
-</script>
+<!--</script>-->
 
 </html>
