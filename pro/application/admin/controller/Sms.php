@@ -36,7 +36,7 @@ class Sms extends Base{
         if( input('order_status') ) $where['status'] = input('order_status');
 
         //分页查询 一页15条数据
-        $list = model('Sms')->where($where)->order('create_time desc')->paginate(15,false,['query' => input()]);
+        $list = model('Sms')->where($where)->order('id desc')->paginate(15,false,['query' => input()]);
         //查询金额
         $sum_fee = model('Sms')->where($where)->sum('fee');
 

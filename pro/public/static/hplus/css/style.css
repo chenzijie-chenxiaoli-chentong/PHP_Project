@@ -3514,13 +3514,13 @@ video {
     background-color: #2f4050;
 }
 
-.wrapper {
-    padding: 0 20px;
-}
+/*.wrapper {*/
+/*    padding: 0;*/
+/*}*/
 
-.wrapper-content {
-    padding: 20px;
-}
+/*.wrapper-content {*/
+/*    padding: 0;*/
+/*}*/
 
 #page-wrapper {
     padding: 0 15px;

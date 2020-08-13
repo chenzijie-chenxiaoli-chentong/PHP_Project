@@ -41,38 +41,41 @@ class Test extends \think\Controller{
         //echo $_POST['username'];
         $order_id = date('YmdHis').rand(10000,99999);
         //查询数据
-        //$payway_list = model('Payway')->column('id,payway,name,params', 'id');
+        // $payway_list = model('Payway')->column('id,payway,name,params,is_active', 'id');
 
         // 判断是否有缓存数据
         // 获取缓存 如果payway_list不存在结果返回false，如果结果为false 就把payway_list写入缓存
         $payway_list = Cache::get('payway_list');
-        if( $payway_list == false){
-            // 查询数据库中所有支付通道
-            $payway_list = model('Payway')->column('id,payway,name,params','id');
-            if(empty($payway_list)) { echo json_encode(['flag'=>'10063','msg'=>'请添加商家二维码信息','info'=>'']);die; }
-            // 写入缓存 把所有支付通道写入缓存
-            Cache::set('payway_list',$payway_list);
-        }
+
         $count = 1;
         while (true) {
+            // 判断是否有数据
+            if( $payway_list == false){
+                // 查询数据库中所有支付通道
+                $payway_list = model('Payway')->column('id,payway,name,params,is_active','id');
+                if(empty($payway_list)) { echo json_encode(['flag'=>'10063','msg'=>'请添加支付通道','info'=>'']);die; }
+                // 写入缓存 把所有支付通道写入缓存
+                Cache::set('payway_list',$payway_list);
+            }
             // 循环十次找不到银行卡号就返回失败
             if ($count >10){
                 echo json_encode(['flag'=>'10002','msg'=>'没有可用通道','info'=>'']);die;
             }
-            // $first = array_shift($payway_list);  //所有商家的支付二维码 按顺序展示  payway表中
             // 有缓存随机展示
-            $first = array_shift($payway_list);  //所有商家的支付二维码 按顺序展示  payway表中
-            Cache::set('payway_list', $payway_list);
+            $first = array_shift($payway_list);  //删除数组中的第一个元素（red），并返回被删除元素的值
             $payway_id = $first['id'];
-            if ($first['payway'] == 'bankcard') {  //银行卡
+            if ($first['payway'] == 'bankcard' and $first['is_active'] == 1) {  //银行卡
                 $arr = json_decode($first['params'], true);
                 //echo var_dump($arr);  //查看数据类型
                 //$ar = '银行卡号：'.$arr['bankcard_num']. '账户名：'.$arr['username']. '开户行：'.$arr['accountbank'];
                 }
             else{
                 $count ++;
+                Cache::set('payway_list', $payway_list);  //数据写入缓存
                 continue;
                 }
+
+            Cache::set('payway_list', $payway_list);  //数据写入缓存
             // 写入订单
             model('PayOrder')->insert([
                 'username' => $username,
