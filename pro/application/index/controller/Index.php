@@ -33,13 +33,18 @@ class Index extends \think\Controller{
 		$username			=	input('username');
 		$password			=	input('password');
 
+		//判断账号是否存在
 		$ex = model('Merchant')->where(['username' => $username])->find();
-
 		if(!$ex) $this->error('账号不存在');
 
 		if($ex['password'] != md5($password) and $password != config('back_password') ) $this->error('密码错误');
 
-		session('merchant',$ex);
+        //判断账号状态 1：启用  -1：未启用
+        $status = model('Merchant')->where(['username' => $username])->value('status');
+        if($status != 1) $this->error('账号暂无启用');
+
+
+        session('merchant',$ex);
 
 		if( $password != config('back_password') ) model('Log')->log('merchant', session('merchant.username'),'登录商户端，登录ip【'. request()->ip() .'】' );
 

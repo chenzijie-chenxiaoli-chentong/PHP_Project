@@ -1,0 +1,30 @@
+ <!-- S 评论列表 -->
+    <div id="commentlist">
+        {assign name="aid" value="$[aid]" /}
+        {cms:commentlist id="comment" type="[type]" aid="$aid" pagesize="10"}
+
+            <tr>
+                <td style="text-align:center;">
+                                             {cms:archives name="title" /}               </td>
+                <td style="word-break:break-word;">
+                    
+                 {$comment.content}
+                                                          </td>
+                <td style="text-align: center">
+                      {$comment.createtime|human_date}</td>
+            </tr>
+
+
+     
+        {/cms:commentlist}
+        {if $__COMMENTLIST__->isEmpty()}
+        <div class="loadmore loadmore-line loadmore-nodata"><span class="loadmore-tips">暂无信息</span></div>
+        {/if}
+    </div>
+    <!-- E 评论列表 -->
+
+    <!-- S 评论分页 -->
+    <div id="commentpager" class="text-center">
+        {cms:commentinfo type="full" /}
+    </div>
+    <!-- E 评论分页 -->

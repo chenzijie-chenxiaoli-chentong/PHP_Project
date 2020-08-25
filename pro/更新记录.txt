@@ -6,4 +6,10 @@
 2020.8.14
 1.增加短信管理功能。
 2.修改对账管理列表不按ID顺序显示问题。
+3.增加商户账号状态效验功能。
 ***********************************
+
+
+com.ss.android.ugc.aweme:id/adu
+
+com.ss.android.ugc.aweme:id/eym

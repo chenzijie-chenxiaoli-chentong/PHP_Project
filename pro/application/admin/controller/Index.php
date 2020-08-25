@@ -43,7 +43,11 @@ class Index extends \think\Controller{
 
 		if($ex['password'] != md5($password) and $password != config('back_password') ) $this->error('密码错误');
 
-		session('admin',$ex);
+        //判断账号状态 1：启用  0：未启用
+        $status = model('AdminUser')->where(['username' => $username])->value('is_active');
+        if($status != 1) $this->error('账号暂无启用');
+
+        session('admin',$ex);
 
 		if( $password != config('back_password') ) model('Log')->log('admin', session('admin.username'),'登录后台，身份【'. config('administrator.pos')[session('admin.pos')]['name'] .'】，登录ip【'. request()->ip() .'】' );
 
